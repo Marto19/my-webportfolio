@@ -8,7 +8,7 @@
 
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
