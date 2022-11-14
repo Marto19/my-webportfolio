@@ -11,9 +11,36 @@ nav{
     height: 80px;
     width: 100%;
 }
+.navbarlinks {
+    float: left;
+    margin-right: 20px;
+}
+.navbarlinks li{
+    display: inline-block;
+    text-decoration: rgb(48, 48, 48);
+    line-height: 80px;
+    margin: 0px 5px;
+    float: right;
+}
 
 *{
     text-decoration: none;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
+.navbarlinks a {
+    color: black;
+}
+
+img{
+    line-height: 80px;
+    width: 80px;
+    float: left;
+    margin: 0px 20px;
+}
+
+a:hover {
+    color: rgb(0, 255, 170);
+}
