@@ -45,3 +45,18 @@ img{
 a:hover {
     color: rgb(0, 255, 170);
 }
+
+.main_content{
+    text-align: center;
+    font-size: 30px;
+    color: white;;
+    padding: 10%;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 98%;
+}
+
+.one{
+
+}
