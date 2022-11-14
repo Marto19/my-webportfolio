@@ -21,8 +21,16 @@ nav{
     line-height: 80px;
     margin: 0px 5px;
     padding: 0px 15px;
+    border-radius: 29px;
+    max-height: 60px;
+    
+    background: #eeeeee;
+    box-shadow:  8px 8px 16px #c5c5c5,
+             -8px -8px 16px #fbfbfb;
     
 }
+
+
 
 *{
     text-decoration: none;
