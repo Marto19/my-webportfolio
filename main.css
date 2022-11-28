@@ -30,8 +30,6 @@ nav{
     
 }
 
-
-
 *{
     text-decoration: none;
     list-style-type: none;
@@ -70,12 +68,20 @@ a:hover {
 
 .one{
     background-color: lightblue;
+    height: 600px;
 }
 
 .two{
     background-color: lightseagreen;
+    height: 600px;;
 }
 
 .three{
     background-color: aqua;
+    height: 600px;
+}
+
+.four{
+    background-color: lightcoral;
+    height: 600px;
 }
