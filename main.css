@@ -6,9 +6,30 @@ header{
 .wrapper{
     width: 95%;
     margin: 0 auto;
+    height: 78px;
 }
-.navigation ul li{
+.header-container{
     display: flex;
+    align-items: center ;
+    justify-content: space-between;
+}
+.navigation nav ul{
+    display: flex;
+}
+
+.navigation nav ul li{
+    align-items: center;
+    font-size: 20px;
+}
+
+.navigation nav ul li a{
+    color:black;
+    margin: 20px;
+    
+}
+
+.navigation nav ul li a:hover{
+    color:aquamarine;
 }
 
 body{
@@ -57,20 +78,20 @@ a:hover {
 
 .one{
     background-color: lightblue;
-    height: 600px;
+    height: 1000px;
 }
 
 .two{
     background-color: lightseagreen;
-    height: 600px;;
+    height: 1000px;;
 }
 
 .three{
     background-color: aqua;
-    height: 600px;
+    height: 1000px;
 }
 
 .four{
     background-color: lightcoral;
-    height: 600px;
+    height: 1000px;
 }
