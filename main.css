@@ -151,12 +151,22 @@ body{
     position: absolute;
     top: 25%;
     left: 15%;
+    font-size: 25px;
+    line-height: 1.6;
 }
 
+.two p em{
+    font-style: italic;
+
+}
 
 .three{
     background-color: aqua;
     height: 1000px;
+    position: relative;
+    color: rgb(58, 58, 58);
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .four{
