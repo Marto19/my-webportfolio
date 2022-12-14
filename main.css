@@ -128,7 +128,7 @@ body{
     font-size: 30px;
     position: absolute;
     top: 48%;
-    left: 43%;
+    left: 43.25%;
 }
 
 .two{
@@ -153,6 +153,25 @@ body{
     right: 5%;
     line-height: 1.6;
 }
+
+/*.two .photo-2 img{
+    position: absolute;
+    width: 540px;
+    height: auto;
+    rotate: 15deg;
+    right: 3%;
+}
+*/
+
+.two .photo-2 img{
+    position: absolute;
+    width: 540px;
+    height: auto;
+    rotate: 13deg;
+    top: 53%;
+    left: 46%;
+}
+
 
 .two p{
     position: absolute;
