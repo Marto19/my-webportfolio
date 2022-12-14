@@ -147,6 +147,14 @@ body{
     font-size: 45px;
 }
 
+.two img{
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    line-height: 1.6;
+   
+}
+
 .two p{
     position: absolute;
     top: 25%;
