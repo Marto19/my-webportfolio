@@ -159,7 +159,7 @@ body{
     width: 540px;
     height: auto;
     rotate: 15deg;
-    right: 3%;
+      right: 3%;
 }
 */
 
@@ -202,6 +202,14 @@ body{
     right: 15%;
     font-weight: bold;
     font-size: 45px;
+}
+
+.three .photo-3 img{
+    position: absolute;
+    width: 540px;
+    height: auto;
+    top: 10%;
+    left: 15%;
 }
 
 .three p{
