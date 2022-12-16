@@ -212,6 +212,15 @@ body{
     left: 15%;
 }
 
+.three .tape-1 img{
+    position: absolute;
+    width: 540px;
+    height: auto;
+    top: 4%;
+    left: 15%;
+    rotate: 5deg;
+}
+
 .three p{
     position: absolute;
     top: 25%;
