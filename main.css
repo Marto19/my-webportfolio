@@ -230,6 +230,16 @@ body{
     text-align: left;
 }
 
+.three .list-ed{
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    font-size: 25px;
+    line-height: 1.6;
+    text-align: left;
+    list-style: circle;
+}
+
 .four{
     background-color: lightcoral;
     height: 1000px;
