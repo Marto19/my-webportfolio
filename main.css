@@ -167,7 +167,7 @@ body{
     position: absolute;
     width: 540px;
     height: auto;
-    rotate: 13deg;
+    transform: rotate(13deg);
     top: 53%;
     left: 46%;
 }
