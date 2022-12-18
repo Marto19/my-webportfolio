@@ -218,7 +218,7 @@ body{
     height: auto;
     top: 4%;
     left: 15%;
-    rotate: 5deg;
+    transform: rotate(5deg);
 }
 
 .three p{
