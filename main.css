@@ -246,7 +246,7 @@ body{
     height: 1000px;
     position: relative;
     color: rgb(255, 255, 255);
-    position: relative;
+    po  sition: relative;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -256,6 +256,23 @@ body{
     left: 15%;
     font-weight: bold;
     font-size: 45px;
+}
+
+.four h3{
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.four .freelance p{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    font-size: 25px;
+    line-height: 1.6;
+    text-align: left;
 }
 
 .four .photo-4 img{
