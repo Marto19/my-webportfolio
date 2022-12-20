@@ -266,15 +266,6 @@ body{
     font-size: 25px;
 }
 
-.four .freelance p{
-    position: absolute;
-    top: 30%;
-    left: 15%;
-    font-size: 25px;
-    line-height: 1.6;
-    text-align: left;
-}
-
 .four .photo-4 img{
     position: absolute;
     width: 540px;
@@ -285,7 +276,7 @@ body{
 
 .four .freelance ul{
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 15%;
     font-size: 25px;
     line-height: 1.6;
