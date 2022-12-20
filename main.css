@@ -282,3 +282,12 @@ body{
     top: 10%;
     right: 15%;
 }
+
+.four .freelance ul{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    font-size: 25px;
+    line-height: 1.6;
+    text-align: left;
+}
