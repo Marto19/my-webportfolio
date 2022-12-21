@@ -285,14 +285,3 @@ body{
     width: 100%;
 }
 
-.four .freelance .test{
-    position: absolute;
-    top: 30%;
-    left: 15%;
-    font-size: 25px;
-    line-height: 1.6;
-    text-align: left;
-    overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
-}
