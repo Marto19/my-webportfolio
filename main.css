@@ -155,15 +155,6 @@ body{
     line-height: 1.6;
 }
 
-/*.two .photo-2 img{
-    position: absolute;
-    width: 540px;
-    height: auto;
-    rotate: 15deg;
-      right: 3%;
-}
-*/
-
 .two .photo-2 img{
     position: absolute;
     width: 540px;
