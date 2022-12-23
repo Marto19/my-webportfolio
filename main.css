@@ -294,6 +294,16 @@ body{
     font-size: 45px;
 }
 
+.five p{
+    position: absolute;
+    top: 25%;
+    right: 15%;
+    font-size: 25px;
+    line-height: 1.6;
+    text-align: left;
+    width: 900px;
+}
+
 .six {
     background-color: rgba(41, 227, 181, 0.535);
     height: 1000px;
