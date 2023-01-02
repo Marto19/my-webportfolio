@@ -254,7 +254,7 @@ body{
     width: 540px;
     height: auto;
     top: 10%;
-    right: 15%;
+    right: 8%;
 }
 
 .four .freelance{
@@ -289,7 +289,7 @@ body{
 .five h1{
     position: absolute;
     top: 15%;
-    right: 25%;
+    right:8%;
     font-weight: bold;
     font-size: 45px;
 }
@@ -297,7 +297,7 @@ body{
 .five p{
     position: absolute;
     top: 25%;
-    right: 15%;
+    right: 8%;
     font-size: 25px;
     line-height: 1.6;
     text-align: left;
