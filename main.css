@@ -244,7 +244,7 @@ body{
 .four h1{
     position: absolute;
     top: 15%;
-    left: 15%;
+    left: 7%;
     font-weight: bold;
     font-size: 45px;
 }
@@ -289,7 +289,7 @@ body{
 .five h1{
     position: absolute;
     top: 15%;
-    right: 15%;
+    right: 25%;
     font-weight: bold;
     font-size: 45px;
 }
