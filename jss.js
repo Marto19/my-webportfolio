@@ -1,25 +1,10 @@
-function myFunction(x){
-    if(x.matches){
-        document.body.style.zoom="100%";
-    }else{
-    	document.body.style.zoom="80%";
-    }   
-} 
-if (matchMedia) {
-	    const x = window.matchMedia("(max-width: 1020px)");
-        x.addListener(myFunction);
-        myFunction(x);
-}
+const heading = document.getElementById("myHeading");
+let scrollAmount = 15;
 
-TweenMax.to(".loader", 2.2, {
-    delay: 5,
-    top: "-100%",
-    ease: Expo.easeInOut
-});
-
-TweenMax.from(".scrollIndicator", 2, {
-    delay: 10,
-    y: -10,
-    opacity: 0,
-    ease: Expo.easeInOut
-});
+setInterval(function() {
+  heading.style.left = `-${scrollAmount}px`;
+  scrollAmount += 15;
+  if (scrollAmount > heading.offsetWidth) {
+    scrollAmount = 0;
+  }
+}, 50);
