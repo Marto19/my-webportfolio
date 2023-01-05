@@ -1,4 +1,6 @@
 let scrollAmount = 15;
+const heading = document.getElementById("myHeading");
+
 
 setInterval(function() {
   heading.style.left = `-${scrollAmount}px`;
@@ -42,8 +44,7 @@ window.onload = function () {
       }, lockMilliseconds);
 
       elementCharacters.forEach((character, index) => {
-        setTimeout(
-          () => {
+        setTimeout(          () => {
             let intervalId = setInterval(() => {
               const randomCharacter = randomArrayElement(characters);
               element.innerText = replaceCharacter(
@@ -63,25 +64,25 @@ window.onload = function () {
             }, characterSelectionMilliseconds);
           },
           delay === 0 ? (delay += 1) : (delay += delayMilliseconds)
-          );
-        });
-      }
+        );
+      });
     }
-  
-    function replaceCharacter(str, index, chr) {
-      return `${str.substring(0, index)}${chr}${str.substring(index + 1)}`;
-    }
-  
-    document.querySelector("a.intro").addEventListener("mouseenter", function(e) {
-      const element = e.target;
-      scrambleText(element);
-      e.preventDefault();
-    });
-  
-    document.querySelector("a.intro-title2").addEventListener("mouseenter", function(e) {
-      const element = e.target;
-      scrambleText(element);
-      e.preventDefault();
-    });
-  };
-  
+  }
+
+  function replaceCharacter(str, index, chr) {
+    return `${str.substring(0, index)}${chr}${str.substring(index + 1)}`;
+  }
+
+  document.querySelector("a.intro").addEventListener("mouseenter", function(e) {
+    const element = e.target;
+    scrambleText(element);
+    e.preventDefault();
+  });
+
+  document.querySelector("a.intro-title2").addEventListener("mouseenter", function(e) {
+    const element = e.target;
+    scrambleText(element);
+    e.preventDefault();
+  });
+};
+
