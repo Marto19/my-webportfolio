@@ -113,7 +113,7 @@ body{
   .loader .intro  {
     font-size: 120px;
     color: #c9d6df;
-    font-family: "Poppins";
+    font-family: Arial, Helvetica, sans-serif;
     margin-left: 70px;
     margin-top: 90px;
   }
