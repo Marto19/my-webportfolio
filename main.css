@@ -110,7 +110,7 @@ body{
     overflow: hidden;
   }
 
-  .loader .intro h1 {
+  .loader .intro  {
     font-size: 120px;
     color: #c9d6df;
     font-family: "Poppins";
@@ -125,19 +125,15 @@ body{
     margin-left: 70px;
     margin-top: 70px;
   }
-
-  .loader marquee {
-    opacity: 0.6;
-    line-height: 205px;
-    margin: 0;
-    padding: 0;
-    color: #000;
+  
+  #myHeading {
     font-size: 250px;
     font-family: "Helvetica";
     text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
     margin-top: 130px;
+    position: relative;
+    white-space: nowrap;
   }
-
 
 .two{
     background-color: lightseagreen;
