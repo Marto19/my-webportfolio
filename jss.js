@@ -77,4 +77,10 @@ window.onload = function () {
     scrambleText(element);
     e.preventDefault();
   });
+
+  document.querySelector("a.aboutme").addEventListener("mouseenter", function(e) {
+    const element = e.target;
+    scrambleText(element);
+    e.preventDefault();
+  });
 };
