@@ -2,13 +2,6 @@ let scrollAmount = 15;
 const heading = document.getElementById("myHeading");
 
 
-setInterval(function() {
-  heading.style.left = `-${scrollAmount}px`;
-  scrollAmount += 15;
-  if (scrollAmount > heading.offsetWidth) {
-    scrollAmount = 0;
-  }
-}, 90);
 
 window.onload = function () {
   const links = document.querySelectorAll("a.cipher");
@@ -73,7 +66,7 @@ window.onload = function () {
     return `${str.substring(0, index)}${chr}${str.substring(index + 1)}`;
   }
 
-  document.querySelector("a.intro").addEventListener("mouseenter", function(e) {
+  document.querySelector("a.intro1").addEventListener("mouseenter", function(e) {
     const element = e.target;
     scrambleText(element);
     e.preventDefault();
