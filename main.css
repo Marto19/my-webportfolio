@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');  
+
+
 header{
     width: 100%;
     background-color: #fbfbfb;
@@ -64,8 +67,6 @@ body{
     z-index: 2;
   }
 
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');  
-
   .loader .intro {
     font-size: 120px;
     color: #c9d6df;
@@ -106,7 +107,7 @@ body{
     color: white;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
-}
+}   
 
 .two .aboutme{
     position: absolute;
@@ -123,7 +124,11 @@ body{
     right: 5%;
     line-height: 1.6;
     width: 40%;
-        height: auto;
+    height: auto;
+}
+
+.two .photo-me img{
+    box-shadow: 10px 0 50px #577ba2, 0 0 2px white, 0 5px 50px #bb7f37;
 }
 
 .two .photo-2 img{
@@ -155,7 +160,6 @@ body{
     height: 1000px;
     position: relative;
     color: #c9d6df;
-    position: relative;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -167,6 +171,8 @@ body{
     height: auto;
     top: 10%;
     left: 15%;
+    box-shadow: 10px 0 50px #577ba2, 0 0 2px white, 0 5px 50px #577ba2;
+
 }
 
 .three .tape-1 img{
@@ -188,8 +194,8 @@ body{
     width: 500px;
 }
 
-.three-text h1{
-
+.three-text .education{
+    color: #c9d6df;
     font-weight: bold;
     font-size: 45px;
 }
@@ -198,19 +204,29 @@ body{
 .four{
     background-color: rgb(32, 32, 32);
     height: 1000px;
-    height: 1000px;
     position: relative;
     color: rgb(255, 255, 255);
-    position: relative;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.four h1{
+.four .experience{
     position: absolute;
     top: 15%;
-    left: 7%;
+    left: 15%;
     font-weight: bold;
     font-size: 45px;
+    color: #c9d6df;
+}
+
+
+.four-text p{
+    top: 25%;
+    left: 15%;
+    position: absolute;
+    font-size: 25px;
+    line-height: 1.6;
+    text-align: left;
+    width: 800px;
 }
 
 .four .photo-4 img{
@@ -221,24 +237,7 @@ body{
     right: 8%;
 }
 
-.four .freelance{
-    position: absolute;
-    top: 25%;
-    font-size: 25px;
-    line-height: 1.6;
-    text-align: left;
-    width: 900px;
-}
 
-.four .freelance p{
-    position: absolute;
-    top: 25%;
-    left: 15%;
-    font-size: 25px;
-    line-height: 1.6;
-    text-align: left;
-    width: 100%;
-}
 
 .five{
     background-color: rgb(249, 161, 161);
