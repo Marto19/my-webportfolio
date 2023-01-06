@@ -101,7 +101,7 @@ body{
   }
 
 .two{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(32, 32, 32);
     height: 1000px;
     color: white;
     position: relative;
@@ -150,7 +150,7 @@ body{
 }
 
 .three {
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(0, 0, 0);
     height: 1000px;
     position: relative;
     color: #c9d6df;
@@ -195,7 +195,7 @@ body{
 
 
 .four{
-    background-color: rgb(32, 178, 178);
+    background-color: rgb(32, 32, 32);
     height: 1000px;
     height: 1000px;
     position: relative;
