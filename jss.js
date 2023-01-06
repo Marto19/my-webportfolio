@@ -1,8 +1,6 @@
 let scrollAmount = 15;
 const heading = document.getElementById("myHeading");
 
-
-
 window.onload = function () {
   const links = document.querySelectorAll("a.cipher");
   const solveMilliseconds = 800;
@@ -66,6 +64,19 @@ window.onload = function () {
     return `${str.substring(0, index)}${chr}${str.substring(index + 1)}`;
   }
 
+  document.addEventListener('scroll', function() {
+    const elements = document.querySelectorAll('.intro1, .intro-title2, .aboutme, .experience, .education');
+    for (const element of elements) {
+      const elementRect = element.getBoundingClientRect();
+      if (elementRect.top < window.innerHeight && elementRect.bottom > 0) {
+        if (!element.hasAttribute('data-scrambled')) {
+          scrambleText(element);
+          element.setAttribute('data-scrambled', true);
+        }
+      }
+    }
+  });
+  
   document.querySelector("a.intro1").addEventListener("mouseenter", function(e) {
     const element = e.target;
     scrambleText(element);
@@ -95,4 +106,4 @@ window.onload = function () {
     scrambleText(element);
     e.preventDefault();
   });
-};
+}  
