@@ -70,12 +70,13 @@ body{
     font-size: 120px;
     color: #c9d6df;
     font-family: 'IBM Plex Mono', monospace;
-    margin-left: 70px;
+    margin-left: 80px;
     margin-top: 90px;
   }
 
-.intro .intro1{
-    width: 700px;
+.intro .intro1 {
+    width: 900px;
+    color: #c9d6df;
 }
 
   .loader .intro-title2{
@@ -84,6 +85,7 @@ body{
     font-family: "Poppins";
     margin-left: 70px;
     margin-top: 70px;
+    width: 900px;
   }
   
   #myHeading {
@@ -145,22 +147,15 @@ body{
 }
 
 .three {
-    background-color: aqua;
+    background-color: rgb(32, 32, 32);
     height: 1000px;
     position: relative;
-    color: rgb(58, 58, 58);
+    color: #c9d6df;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 
-.three h1{
-    position: absolute;
-    top: 15%;
-    right: 15%;
-    font-weight: bold;
-    font-size: 45px;
-}
 
 .three .photo-3 img{
     position: absolute;
@@ -179,7 +174,7 @@ body{
     transform: rotate(5deg);
 }
 
-.three p{
+.three-text{
     position: absolute;
     top: 25%;
     right: 15%;
@@ -188,6 +183,13 @@ body{
     text-align: left;
     width: 500px;
 }
+
+.three-text h1{
+
+    font-weight: bold;
+    font-size: 45px;
+}
+
 
 .four{
     background-color: rgb(32, 178, 178);
@@ -274,6 +276,6 @@ body{
 @media only screen and (min-width:1400px) and (max-width:1920px){
     .photo-me{
         width: 10px;
-        
+        margin: 0 20px;
     }
 }
