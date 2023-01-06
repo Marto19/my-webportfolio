@@ -76,9 +76,10 @@ body{
   }
 
 .intro .intro1 {
-    width: 900px;
+    width: 950px;
     color: #c9d6df;
     margin-left: 70px;
+    margin-right: 40%;
 }
 
   .loader .intro-title2{
