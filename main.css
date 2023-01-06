@@ -92,7 +92,7 @@ body{
   #myHeading {
     font-size: 250px;
     font-family: "Helvetica";
-    text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
+    text-shadow: 3px 0 10px #577ba2, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 5px 10px #bb7f37;
     margin-top: 65px;
     position: relative;
     white-space: nowrap;
