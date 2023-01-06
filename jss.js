@@ -65,7 +65,7 @@ window.onload = function () {
   }
 
   document.addEventListener('scroll', function() {
-    const elements = document.querySelectorAll('.intro1, .intro-title2, .aboutme, .experience, .education');
+    const elements = document.querySelectorAll('.intro1, .intro-title2, .aboutme, .experience, .education, .projects');
     for (const element of elements) {
       const elementRect = element.getBoundingClientRect();
       if (elementRect.top < window.innerHeight && elementRect.bottom > 0) {
@@ -76,7 +76,7 @@ window.onload = function () {
       }
     }
   });
-  
+
   document.querySelector("a.intro1").addEventListener("mouseenter", function(e) {
     const element = e.target;
     scrambleText(element);
@@ -102,6 +102,12 @@ window.onload = function () {
   });
 
   document.querySelector("a.experience").addEventListener("mouseenter", function(e) {
+    const element = e.target;
+    scrambleText(element);
+    e.preventDefault();
+  });
+
+  document.querySelector("a.projects").addEventListener("mouseenter", function(e) {
     const element = e.target;
     scrambleText(element);
     e.preventDefault();
