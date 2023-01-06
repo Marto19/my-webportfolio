@@ -83,4 +83,16 @@ window.onload = function () {
     scrambleText(element);
     e.preventDefault();
   });
+
+  document.querySelector("a.education").addEventListener("mouseenter", function(e) {
+    const element = e.target;
+    scrambleText(element);
+    e.preventDefault();
+  });
+
+  document.querySelector("a.experience").addEventListener("mouseenter", function(e) {
+    const element = e.target;
+    scrambleText(element);
+    e.preventDefault();
+  });
 };
