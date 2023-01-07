@@ -65,7 +65,7 @@ window.onload = function () {
   }
 
   document.addEventListener('scroll', function() {
-    const elements = document.querySelectorAll('.intro1, .intro-title2, .aboutme, .experience, .education, .projects');
+    const elements = document.querySelectorAll('.intro1, .intro-title2, .aboutme, .experience, .education, .projects, .contacts');
     for (const element of elements) {
       const elementRect = element.getBoundingClientRect();
       if (elementRect.top < window.innerHeight && elementRect.bottom > 0) {
@@ -108,6 +108,12 @@ window.onload = function () {
   });
 
   document.querySelector("a.projects").addEventListener("mouseenter", function(e) {
+    const element = e.target;
+    scrambleText(element);
+    e.preventDefault();
+  });
+
+  document.querySelector("a.contacts").addEventListener("mouseenter", function(e) {
     const element = e.target;
     scrambleText(element);
     e.preventDefault();
