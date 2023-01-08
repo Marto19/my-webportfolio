@@ -306,6 +306,61 @@ body{
     height: auto;
 }
 
+.six .social a{
+    position: absolute;
+    color: #c9d6df;
+    font-weight: bold;
+    font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+    font-size: 1.5em; 
+    color: aqua;
+    width: 200px;
+}
+
+.six .social .linkedin a {
+    color: aqua;
+    font-size: 31px;
+    top: 45%;
+    right: 15%;
+    position: absolute;
+    width: 200px;
+
+  }
+
+
+.twitter a{
+    position: absolute;
+    top: 54.5%;
+    right: 20%;
+
+    font-weight: bold;
+}
+
+.facebook{   
+    position: absolute;
+    top: 50%;
+    right: 22%;
+}
+
+.email{
+    position: absolute;
+    top: 59%;
+    right: 31%;
+    color: aqua;
+}
+
+.number{
+    position: absolute;
+    top: 63.5%;
+    right: 20%;
+    color: aqua;
+    font-weight: bold;
+}
+
+.email.social a{
+    width: 500px;
+    font-weight: bold;
+}
+
 @media only screen and (min-width:1400px) and (max-width:1920px){
     .photo-me{
         margin: 0 20px;
