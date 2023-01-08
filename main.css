@@ -301,7 +301,7 @@ body{
 .card{
     position: absolute;
     top: 10%;
-    right: 8%;
+    right: 60%;
     width: 540px;
     height: auto;
 }

@@ -4,7 +4,7 @@ code[class*=language-],pre[class*=language-]{
     background:0 0;
     text-shadow:0 1px rgba(0,0,0,.3);
     font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
-    font-size:1em;
+    font-size:30px;
     text-align:left;
     white-space:pre;
     word-spacing:normal;
@@ -17,12 +17,11 @@ code[class*=language-],pre[class*=language-]{
     -webkit-hyphens:none;
     -moz-hyphens:none;
     -ms-hyphens:none;
-    hyphens:none
+    hyphens:none;
 }
 pre[class*=language-]{
     padding:1em;
     margin: 0;
-    overflow:hidden;
     border-radius:.3em
 }
 :not(pre)>code[class*=language-],pre[class*=language-]{
