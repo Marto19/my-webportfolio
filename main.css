@@ -358,8 +358,357 @@ body{
     font-weight: bold;
 }
 
-@media only screen and (min-width:1400px) and (max-width:1920px){
-    .photo-me{
-        margin: 0 20px;
+    /* Mobile-first layout for smartphones */
+@media only screen and (max-width: 767px) {
+    /* Set the font size of headings to be smaller on small screens */
+    
+    h1 {
+      font-size: 28px;
     }
+    h2 {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+  
+    /* Adjust the layout of the header */
+    header {
+      width: 100%;
+      height: 50px;
+    }
+    .wrapper {
+      width: 95%;
+      height: 50px;
+    }
+    .header-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: left;
+    }
+    .nav-image img {
+      height: 40px;
+    }
+    .navigation nav ul {
+      display: none;
+    }
+    .navbarlinks {
+      display: block;
+      font-size: 18px;
+      color: rgb(255, 0, 0);
+      right: 12%;
+    }
+
+    .loader {
+        position: relative;
+        width: 100%;
+        height: 812px;
+        background: #000;
+        z-index: 2;
+      }
+    
+      .loader .intro {
+        font-size: 35px;
+        color: #c9d6df;
+        font-family: 'IBM Plex Mono', monospace;
+        margin-left: 20px;
+        margin-top: 90px;
+      }
+    
+    .intro .intro1 {
+        width: 950px;
+        color: #c9d6df;
+        margin-left: 20px;
+    }
+    
+      .loader .intro-title2{
+        font-size: 30px;
+        color: #c9d6df;
+        font-family: "Poppins";
+        margin-left: 20px;
+        margin-top: 70px;
+        width: 900px;
+      }
+      
+      #myHeading {
+        font-size: 70px;
+        font-family: "Helvetica";
+        text-shadow: 3px 0 10px #577ba2, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 5px 10px #bb7f37;
+        margin-top: 65px;
+        position: relative;
+        white-space: nowrap;
+        margin-left: 20px;
+        width: 100%;
+      }
+    
+    .two{
+        background-color: rgb(32, 32, 32);
+        height: 812px;
+        color: white;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }   
+    
+    .two .aboutme{
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        font-weight: bold;
+        font-size: 25px;
+        color: #c9d6df;
+    }
+    
+    .two img{
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        line-height: 1.6;
+        width: 50%;
+        height: auto;
+    }
+    
+    .two .photo-me img{
+        box-shadow: 10px 0 50px #577ba2, 0 0 2px white, 0 5px 50px #bb7f37;
+    }
+    
+    .two .photo-2 img{
+        position: absolute;
+        width: 40%;
+        height: auto;
+        transform: rotate(13deg);
+        top: 53%;
+        left: 46%;
+    }
+    
+    
+    .two p{
+        position: absolute;
+        top: 25%;
+        left: 15%;
+        font-size: 25px;
+        line-height: 1.6;
+        width: 100%;
+        font-size: 15px;
+    }
+    
+    .two p em{
+        font-style: italic;
+    
+    }
+    
+    .three {
+        background-color: rgb(0, 0, 0);
+        height: 812px;
+        position: relative;
+        color: #c9d6df;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    
+    
+    .three .photo-3 img{
+        position: absolute;
+        width: 170px;
+        height: auto;
+        top: 10%;
+        left: 15%;
+        box-shadow: 10px 0 50px #577ba2, 0 0 2px white, 0 5px 50px #577ba2;
+    
+    }
+    
+    .three .tape-1 img{
+        position: absolute;
+        width: 40%;
+        height: auto;
+        top: 4%;
+        left: 15%;
+        transform: rotate(5deg);
+    }
+    
+    .three-text{
+        position: absolute;
+        top: 25%;
+        right: 15%;
+        font-size: 15px;
+        line-height: 1.6;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .three-text .education{
+        color: #c9d6df;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    
+    
+    .four{
+        background-color: rgb(32, 32, 32);
+        height: 812px;
+        position: relative;
+        color: rgb(255, 255, 255);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .four .experience{
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        font-weight: bold;
+        font-size: 25px;
+        color: #c9d6df;
+    }
+    
+    
+    .four-text p{
+        top: 25%;
+        left: 15%;
+        position: absolute;
+        font-size: 15px;
+        line-height: 1.6;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .four .photo-4 img{
+        position: absolute;
+        width: 170px;
+        height: auto;
+        top: 10%;
+        right: 8%;
+        box-shadow: 10px 0 50px #577ba2, 0 5px 50px #bb7f37;
+    
+    }
+    
+    
+    .five{
+        background-color: rgb(0, 0, 0);
+        height: 812px;
+        position: relative;
+        color:#c9d6df;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .five .projects{
+        position: absolute;
+        top: 15%;
+        right:8%;
+        font-weight: bold;
+        font-size: 25px;
+        color: #c9d6df;
+    }
+    
+    .five p{
+        position: absolute;
+        top: 25%;
+        right: 8%;
+        font-size: 15px;
+        line-height: 1.6;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .six {
+        background-color: rgb(32, 32, 32);
+        height: 812px;
+        position: relative;
+        color: white;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(32, 32, 32);
+    }
+    
+    .six .contacts{
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        color: #c9d6df;
+        font-weight: bold;
+        font-size: 25px;    
+    }
+    
+    .six p{
+        top: 25%;
+        left: 15%;
+        position: absolute;
+        font-size: 15px;
+        line-height: 1.6;
+        text-align: left;
+        width: 100%;   
+    }
+    .options{
+        position: absolute;
+        top: 10%;
+        right: 15%;
+    }
+.card{
+    display: none;
 }
+    
+    .six .social a{
+        position: absolute;
+        color: #c9d6df;
+        font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+        font-size: 31px; 
+        color: aqua;
+        width: 200px;
+    }
+    
+    .six .social .linkedin a {
+        color: aqua;
+        font-size: 31px;
+        top: 45%;
+        right: 15%;
+        position: absolute;
+        width: 200px;
+    
+      }
+    
+    
+    .twitter a{
+        position: absolute;
+        top: 54.5%;
+        right: 20%;
+    }
+    
+    .facebook{   
+        position: absolute;
+        top: 50%;
+        right: 22%;
+    
+    }
+    
+    .email{
+        position: absolute;
+        top: 59%;
+        right: 31.5%;
+        color: aqua;
+    }
+    
+    .number{
+        position: absolute;
+        top: 63.5%;
+        right: 20%;
+        color: aqua;
+    }
+    
+    .email.social a{
+        width: 500px;
+        font-weight: bold;
+    }
+
+}
+
+/* Layout for tablets and larger smartphones */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* CSS rules go here */
+  }
+
+/* Layout for desktop screens */
+@media only screen and (min-width: 1025px) {
+    /* CSS rules go here */
+  }
+
+  
