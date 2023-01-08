@@ -281,13 +281,28 @@ body{
 
 .six .contacts{
     position: absolute;
-    top: 25%;
+    top: 15%;
     left: 15%;
     color: #c9d6df;
     font-weight: bold;
     font-size: 45px;    
 }
 
+.six p{
+    top: 25%;
+    left: 15%;
+    position: absolute;
+    font-size: 25px;
+    line-height: 1.6;
+    text-align: left;
+    width: 800px;   
+}
+
+.card{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
 
 
 @media only screen and (min-width:1400px) and (max-width:1920px){
