@@ -11,12 +11,7 @@ code[class*=language-],pre[class*=language-]{
     word-break:normal;
     word-wrap:normal;
     line-height:1.5;
-    -moz-tab-size:4;
-    -o-tab-size:4;
     tab-size:4;
-    -webkit-hyphens:none;
-    -moz-hyphens:none;
-    -ms-hyphens:none;
     hyphens:none;
 }
 pre[class*=language-]{
@@ -24,9 +19,7 @@ pre[class*=language-]{
     margin: 0;
     border-radius:.3em
 }
-:not(pre)>code[class*=language-],pre[class*=language-]{
-    background:hsl()
-}
+
 :not(pre)>code[class*=language-]{
     padding:.1em;
     border-radius:.3em;
