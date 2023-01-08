@@ -309,9 +309,8 @@ body{
 .six .social a{
     position: absolute;
     color: #c9d6df;
-    font-weight: bold;
     font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
-    font-size: 1.5em; 
+    font-size: 31px; 
     color: aqua;
     width: 200px;
 }
@@ -331,20 +330,19 @@ body{
     position: absolute;
     top: 54.5%;
     right: 20%;
-
-    font-weight: bold;
 }
 
 .facebook{   
     position: absolute;
     top: 50%;
     right: 22%;
+
 }
 
 .email{
     position: absolute;
     top: 59%;
-    right: 31%;
+    right: 31.5%;
     color: aqua;
 }
 
@@ -353,7 +351,6 @@ body{
     top: 63.5%;
     right: 20%;
     color: aqua;
-    font-weight: bold;
 }
 
 .email.social a{
