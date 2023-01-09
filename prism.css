@@ -83,3 +83,21 @@ pre[class*=language-]{
     }
 }
  
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+   code[class*=language-],pre[class*=language-]{
+        color:#f8f8f2;
+        background:0 0;
+        text-shadow:0 1px rgba(0,0,0,.3);
+        font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+        font-size:23px;
+        text-align:left;
+        white-space:pre;
+        word-spacing:normal;
+        word-break:normal;
+        word-wrap:normal;
+        line-height:1.5;
+        tab-size:4;
+        hyphens:none;
+    } 
+
+}
