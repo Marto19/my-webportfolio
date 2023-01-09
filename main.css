@@ -361,6 +361,7 @@ body{
     /* Mobile-first layout for smartphones */
 @media only screen and (max-width: 767px) {
     /* Set the font size of headings to be smaller on small screens */
+
     
     h1 {
       font-size: 28px;
@@ -390,14 +391,17 @@ body{
       height: 40px;
     }
     .navigation nav ul {
-      display: none;
+      display: flex;
     }
-    .navbarlinks {
-      display: block;
-      font-size: 18px;
-      color: rgb(255, 0, 0);
-      right: 12%;
-    }
+
+    .navigation nav ul li a:hover {
+        color: aquamarine;
+      }
+      .navigation nav ul li a {
+        color: black;
+        margin: 7px;
+        font-size: 10px;
+      }
 
     .loader {
         position: relative;
@@ -436,7 +440,7 @@ body{
         text-shadow: 3px 0 10px #577ba2, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 5px 10px #bb7f37;
         margin-top: 65px;
         position: relative;
-        white-space: nowrap;
+        white-space: normal;
         margin-left: 20px;
         width: 100%;
       }
@@ -519,7 +523,7 @@ body{
     
     .three .tape-1 img{
         position: absolute;
-        width: 40%;
+        width: 40px;
         height: auto;
         top: 4%;
         left: 15%;
@@ -643,26 +647,35 @@ body{
         top: 10%;
         right: 15%;
     }
-.card{
-    display: none;
-}
+
+    .language-html{
+        position: absolute;
+        top: 76px;
+        left: -4%;
+    }
+
+    .social{
+        position: absolute;
+        top: 10%;
+        right: 15%;
+    }
     
     .six .social a{
         position: absolute;
         color: #c9d6df;
         font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
-        font-size: 31px; 
+        font-size: 14px; 
         color: aqua;
-        width: 200px;
+        width: 100%;
+        left: -2%;
     }
     
     .six .social .linkedin a {
         color: aqua;
-        font-size: 31px;
         top: 45%;
         right: 15%;
         position: absolute;
-        width: 200px;
+        width: 100%;
     
       }
     
@@ -695,7 +708,7 @@ body{
     }
     
     .email.social a{
-        width: 500px;
+        width: 100%;
         font-weight: bold;
     }
 

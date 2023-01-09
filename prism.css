@@ -64,4 +64,22 @@ pre[class*=language-]{
 .token.entity{
     cursor:help
 }
+
+@media only screen and (max-width: 767px) {
+    code[class*=language-],pre[class*=language-]{
+        color:#f8f8f2;
+        background:0 0;
+        text-shadow:0 1px rgba(0,0,0,.3);
+        font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+        font-size:12px;
+        text-align:left;
+        white-space:pre;
+        word-spacing:normal;
+        word-break:normal;
+        word-wrap:normal;
+        line-height:1.5;
+        tab-size:4;
+        hyphens:none;
+    }
+}
  
