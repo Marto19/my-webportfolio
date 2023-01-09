@@ -852,11 +852,18 @@ body{
         left: 46%;
     }
     
+    .two .textfor2{
+        line-height: 1.6;
+        width: 90%;
+        font-size: 15px;
+        margin: 0;
+        padding: 10px;
+        padding-top: 20%;
+    }
     
     .two p{
         font-size: 25px;
         line-height: 1.6;
-        
         font-size: 15px;
         margin: 0;
         padding: 10px;
