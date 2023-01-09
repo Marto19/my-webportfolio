@@ -610,8 +610,8 @@ body{
     
     .five .projects{
         position: absolute;
-        top: 15%;
-        right:8%;
+        top: 9%;
+        left:5%;
         font-weight: bold;
         font-size: 25px;
         color: #c9d6df;
@@ -619,17 +619,18 @@ body{
     
     .five p{
         position: absolute;
-        top: 25%;
-        right: -2%;
+        top: 13%;
+        left: 1px;
         font-size: 15px;
         line-height: 1.6;
         text-align: left;
-        width: 100%;
+        width: 90%;
+        padding-left: 5%;
     }
     
     .six {
         background-color: rgb(32, 32, 32);
-        height: 812px;
+        height: 100vh;
         position: relative;
         color: white;
         position: relative;
@@ -639,26 +640,27 @@ body{
     
     .six .contacts{
         position: absolute;
-        top: 15%;
-        left: 15%;
+        top: 9%;
+        left: 5%;
         color: #c9d6df;
         font-weight: bold;
         font-size: 25px;    
     }
     
     .six p{
-        top: 25%;
-        left: 15%;
+        top: 13%;
+        left: 1px;
         position: absolute;
         font-size: 15px;
         line-height: 1.6;
         text-align: left;
-        width: 100%;   
+        width: 100%; 
+        padding: 5%;  
     }
     .options{
         position: absolute;
         top: 10%;
-        right: 15%;
+        right: 11%;
     }
 
     .language-html{
@@ -671,7 +673,7 @@ body{
         position: absolute;
         top: 10%;
         right: 15%;
-        display: none;
+
     }
     
     .six .social a{
@@ -681,17 +683,17 @@ body{
         color: aqua;
         width: 100%;
         left: -2%;
+        display: none;
     }
-    
-    .linkedin {
+
+    .six .social .linkedin a {
         color: aqua;
-        top: 45%;
-        right: 15%;
+        font-size: 31px;
+        top: 43%;
+        right: 12%;
         position: absolute;
-        width: 100%;
-    
-      }
-    
+        width: 200px;
+    }
     
     .twitter {
         position: absolute;
