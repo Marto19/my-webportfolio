@@ -455,11 +455,16 @@ body{
         font-family: Arial, Helvetica, sans-serif;
         font-size: 14px;
     }   
+
+    .textfor2 {
+        line-height: 1.6;
+        width: 90%;
+        font-size: 15px;
+        ;
+    }
     
     .two .aboutme{
         position: absolute;
-        top: 15%;
-        left: 15%;
         font-weight: bold;
         font-size: 25px;
         color: #c9d6df;
@@ -540,6 +545,7 @@ body{
         line-height: 1.6;
         text-align: left;
         width: 100%;
+        
     }
     
     .three-text .education{
@@ -820,19 +826,8 @@ body{
         font-size: 14px;
     }   
 
-    .two .textfor2{
-        padding-top: 20%;
-    }
-
     .two h1{
         margin-top: 0px;
-    }
-    .two .aboutme{
-      margin: 20px;
-        font-weight: bold;
-        font-size: 25px;
-        padding-top: 0;
-        color: #c9d6df;
     }
 
     .two img{
@@ -861,8 +856,7 @@ body{
     .two p{
         font-size: 25px;
         line-height: 1.6;
-        width: 90%;
-        width: 100%;
+        
         font-size: 15px;
         margin: 0;
         padding: 10px;
