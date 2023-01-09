@@ -466,9 +466,9 @@ body{
     .two img{
         position: absolute;
         top: 10%;
-        right: 5%;
+        right: 10%;
         line-height: 1.6;
-        width: 50%;
+        width: 80px;
         height: auto;
     }
     
@@ -489,7 +489,7 @@ body{
     .two p{
         position: absolute;
         top: 25%;
-        left: 15%;
+        left: 1%;
         font-size: 25px;
         line-height: 1.6;
         width: 100%;
@@ -567,7 +567,7 @@ body{
     
     .four-text p{
         top: 25%;
-        left: 15%;
+        left: 0%;
         position: absolute;
         font-size: 15px;
         line-height: 1.6;
@@ -580,7 +580,7 @@ body{
         width: 170px;
         height: auto;
         top: 10%;
-        right: 8%;
+        right: 20%;
         box-shadow: 10px 0 50px #577ba2, 0 5px 50px #bb7f37;
     
     }
@@ -658,11 +658,11 @@ body{
         position: absolute;
         top: 10%;
         right: 15%;
+        display: none;
     }
     
     .six .social a{
         position: absolute;
-        color: #c9d6df;
         font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
         font-size: 14px; 
         color: aqua;
@@ -670,7 +670,7 @@ body{
         left: -2%;
     }
     
-    .six .social .linkedin a {
+    .linkedin {
         color: aqua;
         top: 45%;
         right: 15%;
@@ -680,7 +680,7 @@ body{
       }
     
     
-    .twitter a{
+    .twitter {
         position: absolute;
         top: 54.5%;
         right: 20%;
