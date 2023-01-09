@@ -274,7 +274,7 @@ body{
 
 .six {
     background-color: rgb(32, 32, 32);
-    height: 1000px;
+    height: 100vh;
     position: relative;
     color: white;
     position: relative;
@@ -283,12 +283,13 @@ body{
 
 .six .contacts{
     position: absolute;
-    top: 15%;
+    top: 14%;
     left: 15%;
     color: #c9d6df;
     font-weight: bold;
     font-size: 45px;    
 }
+
 
 .six p{
     top: 25%;
@@ -308,6 +309,11 @@ body{
     height: auto;
 }
 
+.six .social{
+    top: 60%;
+    right: 15%;
+}
+
 .six .social a{
     position: absolute;
     color: #c9d6df;
@@ -320,8 +326,8 @@ body{
 .six .social .linkedin a {
     color: aqua;
     font-size: 31px;
-    top: 45%;
-    right: 15%;
+    top: 43%;
+    right: 12%;
     position: absolute;
     width: 200px;
 
@@ -330,28 +336,28 @@ body{
 
 .twitter a{
     position: absolute;
-    top: 54.5%;
-    right: 20%;
+    top: 51%;
+    right: 18%;
 }
 
 .facebook{   
     position: absolute;
-    top: 50%;
-    right: 22%;
+    top: 47%;
+    right: 21%;
 
 }
 
 .email{
     position: absolute;
-    top: 59%;
+    top: 55.2%;
     right: 31.5%;
     color: aqua;
 }
 
 .number{
     position: absolute;
-    top: 63.5%;
-    right: 20%;
+    top: 59.5%;
+    right: 18%;
     color: aqua;
 }
 
@@ -717,9 +723,12 @@ body{
 }
 
 
-/* Layout for tablets and larger smartphones */
+
+    /* Layout for tablets and larger smartphones */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    /* CSS rules go here */
+
+
+
   }
 
 /* Layout for desktop screens */
