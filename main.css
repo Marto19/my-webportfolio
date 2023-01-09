@@ -45,7 +45,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
 }
 
 
@@ -81,7 +81,7 @@ body{
     width: 950px;
     color: #c9d6df;
     margin-left: 70px;
-    margin-right: 95px;
+    margin-right: 40%;
 }
 
   .loader .intro-title2{
@@ -112,18 +112,12 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }   
 
-.two h1{
+.two .aboutme{
+    position: absolute;
+    top: 15%;
+    left: 15%;
     font-weight: bold;
     font-size: 45px;
-    
-    margin-left: 10%;
-}
-
-.two h1{
-    padding-top: 10%;
-}
-
-.two h1 a{
     color: #c9d6df;
 }
 
@@ -151,10 +145,12 @@ body{
 
 
 .two p{
+    position: absolute;
+    top: 25%;
+    left: 15%;
     font-size: 25px;
     line-height: 1.6;
     width: 500px;
-    margin-left: 10%;
 }
 
 .two p em{
@@ -192,6 +188,9 @@ body{
 }
 
 .three-text{
+    position: absolute;
+    top: 25%;
+    right: 15%;
     font-size: 25px;
     line-height: 1.6;
     text-align: left;
@@ -214,6 +213,9 @@ body{
 }
 
 .four .experience{
+    position: absolute;
+    top: 15%;
+    left: 15%;
     font-weight: bold;
     font-size: 45px;
     color: #c9d6df;
@@ -221,6 +223,9 @@ body{
 
 
 .four-text p{
+    top: 25%;
+    left: 15%;
+    position: absolute;
     font-size: 25px;
     line-height: 1.6;
     text-align: left;
@@ -249,12 +254,18 @@ body{
 }
 
 .five .projects{
+    position: absolute;
+    top: 15%;
+    right:8%;
     font-weight: bold;
     font-size: 45px;
     color: #c9d6df;
 }
 
 .five p{
+    position: absolute;
+    top: 25%;
+    right: 8%;
     font-size: 25px;
     line-height: 1.6;
     text-align: left;
@@ -280,6 +291,9 @@ body{
 }
 
 .six p{
+    top: 25%;
+    left: 15%;
+    position: absolute;
     font-size: 25px;
     line-height: 1.6;
     text-align: left;
@@ -360,9 +374,6 @@ body{
     h3 {
       font-size: 20px;
     }
-    main {
-      width: 100%;
-    }
   
     /* Adjust the layout of the header */
     header {
@@ -429,17 +440,16 @@ body{
         font-size: 70px;
         font-family: "Helvetica";
         text-shadow: 3px 0 10px #577ba2, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 5px 10px #bb7f37;
-        margin: 0;
-        padding: 65px 0 0 20px;
+        margin-top: 65px;
         position: relative;
         white-space: normal;
-        width: 350px;
+        margin-left: 20px;
+        width: 100%;
       }
     
     .two{
         background-color: rgb(32, 32, 32);
         height: 812px;
-        width: 100%;
         color: white;
         position: relative;
         font-family: Arial, Helvetica, sans-serif;
@@ -447,7 +457,9 @@ body{
     }   
     
     .two .aboutme{
-      margin: 20px;
+        position: absolute;
+        top: 15%;
+        left: 15%;
         font-weight: bold;
         font-size: 25px;
         color: #c9d6df;
@@ -477,6 +489,9 @@ body{
     
     
     .two p{
+        position: absolute;
+        top: 25%;
+        left: 1%;
         font-size: 25px;
         line-height: 1.6;
         width: 100%;
@@ -518,8 +533,12 @@ body{
     }
     
     .three-text{
+        position: absolute;
+        top: 25%;
+        right: 15%;
         font-size: 15px;
         line-height: 1.6;
+        text-align: left;
         width: 100%;
     }
     
@@ -539,6 +558,9 @@ body{
     }
     
     .four .experience{
+        position: absolute;
+        top: 15%;
+        left: 15%;
         font-weight: bold;
         font-size: 25px;
         color: #c9d6df;
@@ -546,6 +568,9 @@ body{
     
     
     .four-text p{
+        top: 25%;
+        left: 0%;
+        position: absolute;
         font-size: 15px;
         line-height: 1.6;
         text-align: left;
@@ -573,12 +598,18 @@ body{
     }
     
     .five .projects{
+        position: absolute;
+        top: 15%;
+        right:8%;
         font-weight: bold;
         font-size: 25px;
         color: #c9d6df;
     }
     
     .five p{
+        position: absolute;
+        top: 25%;
+        right: -2%;
         font-size: 15px;
         line-height: 1.6;
         text-align: left;
@@ -605,6 +636,9 @@ body{
     }
     
     .six p{
+        top: 25%;
+        left: 15%;
+        position: absolute;
         font-size: 15px;
         line-height: 1.6;
         text-align: left;
@@ -682,12 +716,408 @@ body{
 
 }
 
+
+    /* Mobile-first layout for smartphones */
+@media only screen and (max-width: 767px) {
+    /* Set the font size of headings to be smaller on small screens */
+
+    .main-content{
+        width: 100%;
+    }
+    
+    h1 {
+      font-size: 28px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    main {
+      width: 100%;
+    }
+  
+    /* Adjust the layout of the header */
+    header {
+      width: 100%;
+      height: 50px;
+    }
+    .wrapper {
+      width: 95%;
+      height: 50px;
+    }
+    .header-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: left;
+    }
+    .nav-image img {
+      height: 40px;
+    }
+    .navigation nav ul {
+      display: flex;
+    }
+
+    .navigation nav ul li a:hover {
+        color: aquamarine;
+      }
+      .navigation nav ul li a {
+        color: black;
+        margin: 7px;
+        font-size: 10px;
+      }
+
+    .loader {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        z-index: 2;
+      }
+    
+      .loader .intro {
+        font-size: 35px;
+        color: #c9d6df;
+        font-family: 'IBM Plex Mono', monospace;
+        margin-left: 20px;
+        margin-top: 90px;
+      }
+    
+    .intro .intro1 {
+        width: 950px;
+        color: #c9d6df;
+        margin-left: 20px;
+    }
+    
+      .loader .intro-title2{
+        font-size: 30px;
+        color: #c9d6df;
+        font-family: "Poppins";
+        margin-left: 20px;
+        margin-top: 70px;
+        width: 900px;
+      }
+      
+      #myHeading {
+        font-size: 70px;
+        font-family: "Helvetica";
+        text-shadow: 3px 0 10px #577ba2, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 5px 10px #bb7f37;
+        margin: 0;
+        padding: 65px 0 0 20px;
+        position: relative;
+        white-space: normal;
+        width: 350px;
+      }
+    
+    .two{
+        background-color: rgb(32, 32, 32);
+        height: 100vh;
+        width: 100%;
+        color: white;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }   
+
+    .two .textfor2{
+        padding-top: 20%;
+    }
+    
+    .two h1{
+        margin-top: 0px;
+        font-weight: bold;
+        font-size: 25px;
+        padding-top: 0;
+    }
+    
+    .two img{
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        line-height: 1.6;
+        width: 80px;
+        height: auto;
+    }
+    
+    .two .photo-me img{
+        box-shadow: 10px 0 50px #577ba2, 0 0 2px white, 0 5px 50px #bb7f37;
+    }
+    
+    .two .photo-2 img{
+        position: absolute;
+        width: 40%;
+        height: auto;
+        transform: rotate(13deg);
+        top: 53%;
+        left: 46%;
+    }
+    
+    
+    .two p{
+        font-size: 25px;
+        line-height: 1.6;
+        width: 90%;
+        font-size: 15px;
+        margin: 0;
+        padding: 10px;
+
+    }
+    
+    .two p em{
+        font-style: italic;
+    
+    }
+    
+    .three {
+        background-color: rgb(0, 0, 0);
+        height: 100vh;
+        position: relative;
+        color: #c9d6df;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .three-text{
+        line-height: 1.6;
+        width: 90%;
+        font-size: 15px;
+        margin: 0;
+        padding: 10px;
+        padding-top: 20%;
+    }
+
+    .three-text h1{
+        margin-left: 10%;
+    }
+    
+    
+    .three .photo-3 img{
+        position: absolute;
+        width: 239px;
+        height: auto;
+        top: 50%;
+        left: 17%;
+        box-shadow: 10px 0 50px #577ba2, 0 0 2px white, 0 5px 50px #577ba2;
+        align-items: center;
+        display: flex;
+    
+    }
+    
+    .three .tape-1 img{
+        position: absolute;
+        width: 40px;
+        height: auto;
+        top: 4%;
+        left: 15%;
+        transform: rotate(5deg);
+    }
+    
+    .three-text .education{
+        color: #c9d6df;
+        font-weight: bold;
+        font-size: 25px;
+        }
+    
+    .four{
+        background-color: rgb(32, 32, 32);
+        height: 100vh;
+        position: relative;
+        color: rgb(255, 255, 255);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .four .experience{
+        font-weight: bold;
+        font-size: 25px;
+        color: #c9d6df;
+    }
+    
+    .four .four-text{
+        padding-top: 20%;
+        line-height: 1.6;
+        width: 90%;
+        font-size: 15px;
+        margin: 0;
+        padding: 10px;
+        padding-top: 20%;
+    }
+    
+    .four-text p{
+        font-size: 15px;
+        line-height: 1.6;
+        text-align: left;
+        width: 100%;
+    }
+
+    .four-text h1{
+        margin-left: 10%;
+    }
+    
+    .four .photo-4 img{
+        position: absolute;
+        width: 170px;
+        height: auto;
+        top: 10%;
+        right: 20%;
+        box-shadow: 10px 0 50px #577ba2, 0 5px 50px #bb7f37;
+    
+    }
+    
+    
+    .five{
+        background-color: rgb(0, 0, 0);
+        height: 100vh;
+        position: relative;
+        color:#c9d6df;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .five-text{
+        line-height: 1.6;
+        width: 90%;
+        font-size: 15px;
+        margin: 0;
+        padding: 10px;
+        padding-top: 20%;
+    }
+
+    .five-text h1{
+        margin-left: 10%;
+    }
+    
+    .five .projects{
+        font-weight: bold;
+        font-size: 25px;
+        color: #c9d6df;
+    }
+    
+    .five p{
+        font-size: 15px;
+        line-height: 1.6;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .six {
+        background-color: rgb(32, 32, 32);
+        height: 100vh;
+        position: relative;
+        color: white;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(32, 32, 32);
+    }
+    
+    .six .six-text{
+        line-height: 1.6;
+        width: 90%;
+        font-size: 15px;
+        margin: 0;
+        padding: 10px;
+        padding-top: 20%;
+    }
+
+    .six-text h1{
+        margin-left: 10%;
+    }
+
+    .six .contacts{
+        top: 10%;
+        left: 0;
+        margin-left: 10%;
+        color: #c9d6df;
+        font-weight: bold;
+        font-size: 25px;    
+    }
+    
+    .six p{
+        margin-top: 17%;
+        font-size: 15px;
+        line-height: 1.6;
+        text-align: left;
+        width: 100%;   
+    }
+
+    .options{
+        position: absolute;
+        top: 10%;
+        right: 15%;
+    }
+
+    .language-html{
+        position: absolute;
+        top: 76px;
+        left: -4%;
+        padding: 10px;
+    }
+
+    .social{
+        position: absolute;
+        top: 10%;
+        right: 15%;
+        display: none;
+    }
+    
+    .six .social a{
+        position: absolute;
+        font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+        font-size: 14px; 
+        color: aqua;
+        width: 100%;
+        left: -2%;
+    }
+    
+    .linkedin {
+        color: aqua;
+        top: 45%;
+        right: 15%;
+        position: absolute;
+        width: 100%;
+    
+      }
+    
+    
+    .twitter {
+        position: absolute;
+        top: 54.5%;
+        right: 20%;
+    }
+    
+    .facebook{   
+        position: absolute;
+        top: 50%;
+        right: 22%;
+    
+    }
+    
+    .email{
+        position: absolute;
+        top: 59%;
+        right: 31.5%;
+        color: aqua;
+    }
+    
+    .number{
+        position: absolute;
+        top: 63.5%;
+        right: 20%;
+        color: aqua;
+    }
+    
+    .email.social a{
+        width: 100%;
+        font-weight: bold;
+    }
+
+}
+
 /* Layout for tablets and larger smartphones */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     /* CSS rules go here */
   }
 
 /* Layout for desktop screens */
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1025px){
     /* CSS rules go here */
+    
   }
