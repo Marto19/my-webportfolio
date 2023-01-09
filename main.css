@@ -361,7 +361,7 @@ body{
 }
 
     /* Mobile-first layout for smartphones */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width : 480px ){
     /* Set the font size of headings to be smaller on small screens */
 
     
@@ -723,7 +723,7 @@ body{
 }
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width : 480px ){
     /* Set the font size of headings to be smaller on small screens */
 
     .main-content{
@@ -1134,12 +1134,18 @@ body{
 }
 
 /* Layout for tablets and larger smartphones */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and ( min-width : 481px ) and (max-width : 768px ){
     /* CSS rules go here */
   }
 
 /* Layout for desktop screens */
-@media only screen and (min-width: 1025px){
+@media only screen and (min-width : 769px ) and (max-width : 1024px){
     /* CSS rules go here */
     
   }
+
+@media (min-width: 1025px) and (max-width: 1200px){
+}
+
+@media (min-width: 1201px){
+}
