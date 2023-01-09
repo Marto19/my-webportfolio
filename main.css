@@ -45,7 +45,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    background-color: black;
+    background-color: plum;
 }
 
 
@@ -81,7 +81,7 @@ body{
     width: 950px;
     color: #c9d6df;
     margin-left: 70px;
-    margin-right: 40%;
+    margin-right: 95px;
 }
 
   .loader .intro-title2{
@@ -113,9 +113,6 @@ body{
 }   
 
 .two .aboutme{
-    position: absolute;
-    top: 15%;
-    left: 15%;
     font-weight: bold;
     font-size: 45px;
     color: #c9d6df;
@@ -145,9 +142,6 @@ body{
 
 
 .two p{
-    position: absolute;
-    top: 25%;
-    left: 15%;
     font-size: 25px;
     line-height: 1.6;
     width: 500px;
@@ -188,9 +182,6 @@ body{
 }
 
 .three-text{
-    position: absolute;
-    top: 25%;
-    right: 15%;
     font-size: 25px;
     line-height: 1.6;
     text-align: left;
@@ -213,9 +204,6 @@ body{
 }
 
 .four .experience{
-    position: absolute;
-    top: 15%;
-    left: 15%;
     font-weight: bold;
     font-size: 45px;
     color: #c9d6df;
@@ -223,9 +211,6 @@ body{
 
 
 .four-text p{
-    top: 25%;
-    left: 15%;
-    position: absolute;
     font-size: 25px;
     line-height: 1.6;
     text-align: left;
@@ -254,18 +239,12 @@ body{
 }
 
 .five .projects{
-    position: absolute;
-    top: 15%;
-    right:8%;
     font-weight: bold;
     font-size: 45px;
     color: #c9d6df;
 }
 
 .five p{
-    position: absolute;
-    top: 25%;
-    right: 8%;
     font-size: 25px;
     line-height: 1.6;
     text-align: left;
@@ -291,9 +270,6 @@ body{
 }
 
 .six p{
-    top: 25%;
-    left: 15%;
-    position: absolute;
     font-size: 25px;
     line-height: 1.6;
     text-align: left;
@@ -374,6 +350,9 @@ body{
     h3 {
       font-size: 20px;
     }
+    main {
+      width: 100%;
+    }
   
     /* Adjust the layout of the header */
     header {
@@ -440,16 +419,17 @@ body{
         font-size: 70px;
         font-family: "Helvetica";
         text-shadow: 3px 0 10px #577ba2, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 5px 10px #bb7f37;
-        margin-top: 65px;
+        margin: 0;
+        padding: 65px 0 0 20px;
         position: relative;
         white-space: normal;
-        margin-left: 20px;
-        width: 100%;
+        width: 350px;
       }
     
     .two{
         background-color: rgb(32, 32, 32);
         height: 812px;
+        width: 100%;
         color: white;
         position: relative;
         font-family: Arial, Helvetica, sans-serif;
@@ -457,9 +437,7 @@ body{
     }   
     
     .two .aboutme{
-        position: absolute;
-        top: 15%;
-        left: 15%;
+      margin: 20px;
         font-weight: bold;
         font-size: 25px;
         color: #c9d6df;
@@ -489,9 +467,6 @@ body{
     
     
     .two p{
-        position: absolute;
-        top: 25%;
-        left: 1%;
         font-size: 25px;
         line-height: 1.6;
         width: 100%;
@@ -533,12 +508,8 @@ body{
     }
     
     .three-text{
-        position: absolute;
-        top: 25%;
-        right: 15%;
         font-size: 15px;
         line-height: 1.6;
-        text-align: left;
         width: 100%;
     }
     
@@ -558,9 +529,6 @@ body{
     }
     
     .four .experience{
-        position: absolute;
-        top: 15%;
-        left: 15%;
         font-weight: bold;
         font-size: 25px;
         color: #c9d6df;
@@ -568,9 +536,6 @@ body{
     
     
     .four-text p{
-        top: 25%;
-        left: 0%;
-        position: absolute;
         font-size: 15px;
         line-height: 1.6;
         text-align: left;
@@ -598,18 +563,12 @@ body{
     }
     
     .five .projects{
-        position: absolute;
-        top: 15%;
-        right:8%;
         font-weight: bold;
         font-size: 25px;
         color: #c9d6df;
     }
     
     .five p{
-        position: absolute;
-        top: 25%;
-        right: -2%;
         font-size: 15px;
         line-height: 1.6;
         text-align: left;
@@ -636,9 +595,6 @@ body{
     }
     
     .six p{
-        top: 25%;
-        left: 15%;
-        position: absolute;
         font-size: 15px;
         line-height: 1.6;
         text-align: left;
@@ -725,5 +681,3 @@ body{
 @media only screen and (min-width: 1025px) {
     /* CSS rules go here */
   }
-
-  
