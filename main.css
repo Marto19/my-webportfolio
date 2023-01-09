@@ -356,7 +356,7 @@ body{
 
 .number{
     position: absolute;
-    top: 59.5%;
+    top: 59%;
     right: 18%;
     color: aqua;
 }
@@ -429,7 +429,7 @@ body{
     .intro .intro1 {
         color: #c9d6df;
         margin-left: 20px;
-        margin-right: 22%;
+        margin-right: 10%;
     }
     
       .loader .intro-title2{
@@ -465,7 +465,7 @@ body{
         line-height: 1.6;
         width: 90%;
         font-size: 15px;
-        ;
+        top: 21%;
     }
     
     .two .aboutme{
@@ -473,6 +473,7 @@ body{
         font-weight: bold;
         font-size: 25px;
         color: #c9d6df;
+        margin-left: -37px;
     }
     
     
@@ -495,12 +496,14 @@ body{
     
     .two p{
         position: absolute;
-        top: 25%;
         left: 1%;
         font-size: 25px;
         line-height: 1.6;
-        width: 100%;
+        width: 90%;
         font-size: 15px;
+        padding-left: 4%;
+        padding-right: 2%;
+        top: 21%;
     }
     
     .two p em{
@@ -510,7 +513,7 @@ body{
     
     .three {
         background-color: rgb(0, 0, 0);
-        height: 812px;
+        height: 100vh;
         position: relative;
         color: #c9d6df;
         font-family: Arial, Helvetica, sans-serif;
@@ -520,7 +523,7 @@ body{
     
     .three .photo-3 img{
         position: absolute;
-        width: 170px;
+        width: 70%;
         height: auto;
         top: 10%;
         left: 15%;
@@ -530,21 +533,22 @@ body{
     
     .three .tape-1 img{
         position: absolute;
-        width: 40px;
+        width: 60%;
         height: auto;
-        top: 4%;
-        left: 15%;
+        top: 7%;
+        left: 17%;
         transform: rotate(5deg);
     }
     
     .three-text{
         position: absolute;
-        top: 25%;
-        right: 15%;
+        top: 60%;
+        left: 3%;
         font-size: 15px;
         line-height: 1.6;
         text-align: left;
-        width: 100%;
+        width: 90%;
+        padding-left: 2%;
         
     }
     
@@ -557,7 +561,7 @@ body{
     
     .four{
         background-color: rgb(32, 32, 32);
-        height: 812px;
+        height: 100vh;
         position: relative;
         color: rgb(255, 255, 255);
         font-family: Arial, Helvetica, sans-serif;
@@ -565,8 +569,8 @@ body{
     
     .four .experience{
         position: absolute;
-        top: 15%;
-        left: 15%;
+        top: 9%;
+        left: 5%;
         font-weight: bold;
         font-size: 25px;
         color: #c9d6df;
@@ -574,21 +578,22 @@ body{
     
     
     .four-text p{
-        top: 25%;
-        left: 0%;
+        top: 13%;
+        left: 1px;
         position: absolute;
         font-size: 15px;
         line-height: 1.6;
         text-align: left;
-        width: 100%;
+        padding-left: 5%;
+        width: 90%;
     }
     
     .four .photo-4 img{
         position: absolute;
-        width: 170px;
+        width: 70%;
         height: auto;
-        top: 10%;
-        right: 20%;
+        top: 43%;
+        right: 15%;
         box-shadow: 10px 0 50px #577ba2, 0 5px 50px #bb7f37;
     
     }
