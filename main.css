@@ -717,14 +717,13 @@ body{
 }
 
 
-    /* Mobile-first layout for smartphones */
 @media only screen and (max-width: 767px) {
     /* Set the font size of headings to be smaller on small screens */
 
     .main-content{
         width: 100%;
     }
-    
+
     h1 {
       font-size: 28px;
     }
@@ -758,7 +757,6 @@ body{
     .navigation nav ul {
       display: flex;
     }
-
     .navigation nav ul li a:hover {
         color: aquamarine;
       }
@@ -767,11 +765,11 @@ body{
         margin: 7px;
         font-size: 10px;
       }
-
     .loader {
         position: relative;
         width: 100%;
         height: 100vh;
+        height: 812px;
         background: #000;
         z-index: 2;
       }
@@ -809,10 +807,11 @@ body{
         white-space: normal;
         width: 350px;
       }
-    
+
     .two{
         background-color: rgb(32, 32, 32);
         height: 100vh;
+        height: 812px;
         width: 100%;
         color: white;
         position: relative;
@@ -823,14 +822,18 @@ body{
     .two .textfor2{
         padding-top: 20%;
     }
-    
+
     .two h1{
         margin-top: 0px;
+    }
+    .two .aboutme{
+      margin: 20px;
         font-weight: bold;
         font-size: 25px;
         padding-top: 0;
+        color: #c9d6df;
     }
-    
+
     .two img{
         position: absolute;
         top: 10%;
@@ -858,25 +861,27 @@ body{
         font-size: 25px;
         line-height: 1.6;
         width: 90%;
+        width: 100%;
         font-size: 15px;
         margin: 0;
         padding: 10px;
 
     }
-    
+
     .two p em{
         font-style: italic;
     
     }
-    
+
     .three {
         background-color: rgb(0, 0, 0);
         height: 100vh;
+        height: 812px;
         position: relative;
         color: #c9d6df;
         font-family: Arial, Helvetica, sans-serif;
     }
-    
+
     .three-text{
         line-height: 1.6;
         width: 90%;
@@ -889,20 +894,23 @@ body{
     .three-text h1{
         margin-left: 10%;
     }
-    
-    
+
+
     .three .photo-3 img{
         position: absolute;
         width: 239px;
+        width: 170px;
         height: auto;
         top: 50%;
         left: 17%;
+        top: 10%;
+        left: 15%;
         box-shadow: 10px 0 50px #577ba2, 0 0 2px white, 0 5px 50px #577ba2;
         align-items: center;
         display: flex;
-    
+
     }
-    
+
     .three .tape-1 img{
         position: absolute;
         width: 40px;
@@ -911,16 +919,24 @@ body{
         left: 15%;
         transform: rotate(5deg);
     }
-    
+
+    .three-text{
+        font-size: 15px;
+        line-height: 1.6;
+        width: 100%;
+    }
+
     .three-text .education{
         color: #c9d6df;
         font-weight: bold;
         font-size: 25px;
         }
-    
+
+
     .four{
         background-color: rgb(32, 32, 32);
         height: 100vh;
+        height: 812px;
         position: relative;
         color: rgb(255, 255, 255);
         font-family: Arial, Helvetica, sans-serif;
@@ -931,7 +947,7 @@ body{
         font-size: 25px;
         color: #c9d6df;
     }
-    
+
     .four .four-text{
         padding-top: 20%;
         line-height: 1.6;
@@ -941,7 +957,7 @@ body{
         padding: 10px;
         padding-top: 20%;
     }
-    
+
     .four-text p{
         font-size: 15px;
         line-height: 1.6;
@@ -952,7 +968,7 @@ body{
     .four-text h1{
         margin-left: 10%;
     }
-    
+
     .four .photo-4 img{
         position: absolute;
         width: 170px;
@@ -963,12 +979,14 @@ body{
     
     }
     
-    
+
     .five{
         background-color: rgb(0, 0, 0);
         height: 100vh;
+        height: 812px;
         position: relative;
         color:#c9d6df;
+        position: relative;
         font-family: Arial, Helvetica, sans-serif;
     }
 
@@ -984,7 +1002,7 @@ body{
     .five-text h1{
         margin-left: 10%;
     }
-    
+
     .five .projects{
         font-weight: bold;
         font-size: 25px;
@@ -997,17 +1015,18 @@ body{
         text-align: left;
         width: 100%;
     }
-    
+
     .six {
         background-color: rgb(32, 32, 32);
         height: 100vh;
+        height: 812px;
         position: relative;
         color: white;
         position: relative;
         font-family: Arial, Helvetica, sans-serif;
         background-color: rgb(32, 32, 32);
     }
-    
+
     .six .six-text{
         line-height: 1.6;
         width: 90%;
@@ -1025,11 +1044,14 @@ body{
         top: 10%;
         left: 0;
         margin-left: 10%;
+        position: absolute;
+        top: 15%;
+        left: 15%;
         color: #c9d6df;
         font-weight: bold;
         font-size: 25px;    
     }
-    
+
     .six p{
         margin-top: 17%;
         font-size: 15px;
@@ -1043,7 +1065,6 @@ body{
         top: 10%;
         right: 15%;
     }
-
     .language-html{
         position: absolute;
         top: 76px;
@@ -1108,7 +1129,6 @@ body{
         width: 100%;
         font-weight: bold;
     }
-
 }
 
 /* Layout for tablets and larger smartphones */
