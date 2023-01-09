@@ -532,7 +532,7 @@ body{
         transform: rotate(5deg);
     }
     
-    .three-text p{
+    .three-text{
         position: absolute;
         top: 25%;
         right: 15%;
