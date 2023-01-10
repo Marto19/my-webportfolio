@@ -61,11 +61,13 @@ body{
     margin-left: 20px;;
 }
 
-
+.main-content {
+    height: 100vh;
+}
 .loader {
     position: relative;
+    height: 100%;
     width: 100%;
-    height: 100vh;
     background: #000;
     z-index: 2;
   }
@@ -76,6 +78,7 @@ body{
     font-family: 'IBM Plex Mono', monospace;
     margin-left: 70px;
     margin-top: 90px;
+    width: 1400px;
   }
 
 .intro .intro1 {
@@ -246,12 +249,25 @@ body{
 
 .five{
     background-color: rgb(0, 0, 0);
-    height: 1000px;
-    height: 1000px;
+    height: 100vh;
     position: relative;
     color:#c9d6df;
-    position: relative;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.five .image5 {
+    height: 100vh;
+    display: flex;
+
+}
+
+.five .image5 img {
+    width: 28%;
+    height: auto;
+    object-fit: contain;
+    text-align: left;
+    padding: 10px;
+    margin-left: 13%;
 }
 
 .five .projects{
@@ -278,7 +294,6 @@ body{
     height: 100vh;
     position: relative;
     color: white;
-    position: relative;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -414,7 +429,7 @@ body{
     .loader {
         position: relative;
         width: 100%;
-        height: 812px;
+        height: 100vh;
         background: #000;
         z-index: 2;
       }
@@ -425,6 +440,7 @@ body{
         font-family: 'IBM Plex Mono', monospace;
         margin-left: 20px;
         margin-top: 90px;
+        width: 300px;
       }
     
     .intro .intro1 {
@@ -460,29 +476,31 @@ body{
         position: relative;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 14px;
+        padding: 20px;
     }   
 
     .textfor2 {
         line-height: 1.6;
         width: 90%;
         font-size: 15px;
-        top: 21%;
+        position: static;
     }
+
     
     .two .aboutme{
-        position: absolute;
+        position: static;
         font-weight: bold;
         font-size: 25px;
         color: #c9d6df;
-        margin-left: -37px;
+        margin-left: 12px;
     }
     
-    
+
     .two .photo-me img{
         box-shadow: 10px 0 50px #577ba2, 0 0 2px white, 0 5px 50px #bb7f37;
         width: 74%;
-        top: 52%;
-        left: 13%;
+        top: 40%;
+        left: 12%;
     }
     
     .two .photo-2 img{
@@ -490,21 +508,19 @@ body{
         width: 55%;
         height: auto;
         transform: rotate(13deg);
-        top: 74%;
+        top: 64%;
         left: 6%;
     }
     
     
     .two p{
-        position: absolute;
-        left: 1%;
+        position: static;
         font-size: 25px;
         line-height: 1.6;
         width: 90%;
         font-size: 15px;
         padding-left: 4%;
         padding-right: 2%;
-        top: 21%;
     }
     
     .two p em{
@@ -521,10 +537,10 @@ body{
     }
     
     .three .photo-3 {
-        height: 600px;
+        max-height: 600px;
         width: 60%;
         margin: 0 auto;
-        padding: 0;
+        padding: 30px;
     }
     
     .three .photo-3 img{
@@ -532,13 +548,15 @@ body{
         height: 100%;
         box-shadow: 10px 0 50px #577ba2, 0 0 2px white, 0 5px 50px #577ba2;
         position: static;
+        object-fit:fill;
     }
     
     .three .tape-1 img{
         width: 60%;
         height: auto;
         transform: rotate(5deg);
-        position: static;
+        top: 2%;
+        left: 20%;
     }
     
     .three-text{
@@ -546,8 +564,8 @@ body{
         line-height: 1.6;
         text-align: left;
         width: 90%;
-        padding-left: 2%;
         position: static;
+        margin-left: 15px;
         
     }
     
@@ -606,6 +624,23 @@ body{
         position: relative;
         font-family: Arial, Helvetica, sans-serif;
     }
+
+    .five .image5 {
+        height: 100vh;
+        display: flex;
+    
+    }
+    
+    .five .image5 img {
+        width: 65%;
+        height: auto;
+        object-fit: contain;
+        text-align: left;
+        padding: 10px;
+        margin-left: 16%;
+        margin-top: 50%;
+    }
+
     
     .five .projects{
         position: absolute;
@@ -626,6 +661,7 @@ body{
         width: 90%;
         padding-left: 5%;
     }
+
     
     .six {
         background-color: rgb(32, 32, 32);
@@ -663,9 +699,8 @@ body{
     }
 
     .language-html{
-        position: absolute;
-        top: 76px;
-        left: -4%;
+        position: static;
+        margin: 0;
     }
 
     .social{
@@ -989,6 +1024,20 @@ body{
           width: 90%;
           padding-left: 5%;
       }
+
+      .five .image5 {
+        height: 100vh;
+        display: flex;
+    
+    }
+    
+    .five .image5 img {
+        position: absolute;
+    width: 540px;
+    height: auto;
+    top: 10%;   
+    left: 15%;
+    }
       
       .six {
           background-color: rgb(32, 32, 32);
