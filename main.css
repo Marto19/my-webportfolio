@@ -291,7 +291,7 @@ body{
 
 .six {
     background-color: rgb(32, 32, 32);
-    height: 100vh;
+    height: 1000px;
     position: relative;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -342,8 +342,8 @@ body{
 .six .social .linkedin a {
     color: aqua;
     font-size: 31px;
-    top: 43%;
-    right: 12%;
+    top: 45%;
+    right: 26%;
     position: absolute;
     width: 200px;
 
@@ -352,28 +352,28 @@ body{
 
 .twitter a{
     position: absolute;
-    top: 51%;
-    right: 18%;
+    top: 54.2%;
+    right: 32%;
 }
 
 .facebook{   
     position: absolute;
-    top: 47%;
-    right: 21%;
+    top: 49.7%;
+    right: 33.5%;
 
 }
 
 .email{
     position: absolute;
-    top: 55.2%;
-    right: 31.5%;
+    top: 59%;
+    left: 57%;
     color: aqua;
 }
 
 .number{
     position: absolute;
-    top: 59%;
-    right: 18%;
+    top: 63.2%;
+    right: 31%;
     color: aqua;
 }
 
@@ -665,7 +665,7 @@ body{
     
     .six {
         background-color: rgb(32, 32, 32);
-        height: 100vh;
+        height: 800px;
         position: relative;
         color: white;
         position: relative;
@@ -731,8 +731,8 @@ body{
     
     .twitter {
         position: absolute;
-        top: 54.5%;
-        right: 20%;
+        top: 82.5%;
+        right: 32%;
     }
     
     .facebook{   
@@ -1122,7 +1122,7 @@ body{
       
       .email{
           position: absolute;
-          top: 59%;
+          top: 79%;
           right: 31.5%;
           color: aqua;
       }
