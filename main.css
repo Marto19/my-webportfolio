@@ -107,3 +107,82 @@ body{
     margin-left: 140px;
     width: 500px;
   }
+
+  /* Media queries for different screen sizes */
+@media screen and (max-width: 360px) {
+  /* Styles for small mobile (360x640) */
+  .intro .intro1 {
+      font-size: 24px;
+  }
+  .loader .intro-title2 {
+      font-size: 16px;
+  }
+  #myHeading {
+      font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* Styles for average mobile (375x667) */
+  .intro .intro1 {
+      font-size: 26px;
+  }
+  .loader .intro-title2 {
+      font-size: 18px;
+  }
+  #myHeading {
+      font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  /* Styles for large mobile (720x1280) */
+  .intro .intro1 {
+      font-size: 28px;
+  }
+  .loader .intro-title2 {
+      font-size: 20px;
+  }
+  #myHeading {
+      font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  /* Styles for average laptop (1366x768) */
+  .intro .intro1 {
+      font-size: 36px;
+  }
+  .loader .intro-title2 {
+      font-size: 28px;
+  }
+  #myHeading {
+      font-size: 150px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  /* Styles for average desktop (1440x900) */
+  .intro .intro1 {
+      font-size: 38px;
+  }
+  .loader .intro-title2 {
+      font-size: 30px;
+  }
+  #myHeading {
+      font-size: 160px;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  /* Styles for large desktop (1920x1080) */
+  .intro .intro1 {
+      font-size: 40px;
+  }
+  .loader .intro-title2 {
+      font-size: 32px;
+  }
+  #myHeading {
+      font-size: 180px;
+  }
+}
