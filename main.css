@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');  
 
 
-header{
+/* header{
     width: 100%;
     background-color: #fbfbfb;
 }
@@ -39,7 +39,7 @@ header{
 
 .navigation nav ul li a:hover{
     color:aquamarine;
-}
+} */
 
 body{
     margin: 0;
@@ -77,7 +77,6 @@ body{
     color: #c9d6df;
     font-family: 'IBM Plex Mono', monospace;
     margin-left: 70px;
-    margin-top: 90px;
     width: 1400px;
   }
 
