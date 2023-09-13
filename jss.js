@@ -6,7 +6,7 @@ window.onload = function () {
   const solveMilliseconds = 800;
   const characterSelectionMilliseconds = 40;
   const delayMilliseconds = 250;
-  const characters = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890*#@/*!%&^"];
+  const characters = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890*#@/*!%&^"];
 
   const randomArrayElement = (arr) => {
     return arr[(arr.length * Math.random()) | 0];
@@ -89,7 +89,7 @@ window.onload = function () {
     e.preventDefault();
   });
 
-  document.querySelector("a.aboutme").addEventListener("mouseenter", function(e) {
+  document.querySelector("a.who_am_i").addEventListener("mouseenter", function(e) {
     const element = e.target;
     scrambleText(element);
     e.preventDefault();

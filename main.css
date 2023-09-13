@@ -73,50 +73,56 @@ body{
   }
 
   .loader .intro {
-    font-size: 80px;
     color: #c9d6df;
     font-family: 'IBM Plex Mono', monospace;
     margin-left: 70px;
+    margin-top: 50px;
     width: 1400px;
   }
 
 .intro .intro1 {
-    width: 91px;
+    font-size: 70px;
     color: #c9d6df;
-    margin-top: 50px;
 }
 
   .loader .intro-title2{
-    font-size: 80px;
+    font-size: 50px;
     color: #c9d6df;
     font-family: "Poppins";
-    margin-top: 70px;
+    padding-top: 50px;
     width: 900px;
   }
   
   #myHeading {
-    font-size: 250px;
+    font-size: 200px;
     font-family: "Helvetica";
     text-shadow: 3px 0 10px #577ba2, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 5px 10px #bb7f37;
-    margin-top: 65px;
+    margin-top: 40px;
+    margin-left: 70px;
     position: relative;
     white-space: nowrap;
-    margin-left: 140px;
     width: 500px;
   }
 
+
+  @media screen and (max-width: 360px) {
+    .loader .intro {
+        margin-left: 20px;
+    }
+
+    .intro .intro1 {
+        font-size: 44px;
+    }
+    .loader .intro-title2 {
+        font-size: 36px;
+    }
+    #myHeading {
+        font-size: 65px;
+        margin-left: 20px;
+    }
+  }
+  
 /* 
-@media screen and (max-width: 360px) {
-  .intro .intro1 {
-      font-size: 24px;
-  }
-  .loader .intro-title2 {
-      font-size: 16px;
-  }
-  #myHeading {
-      font-size: 60px;
-  }
-}
 
 @media screen and (max-width: 375px) {
   .intro .intro1 {
