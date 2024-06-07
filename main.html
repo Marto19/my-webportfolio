@@ -34,9 +34,18 @@
           </nav> -->
           
 
-      <div class="section1">
-        <h1 class="display-2">Hello, my name is <b>Martin Trenkov! </h1>
-        <div id="photome" class="text-center"></div>
+      <div class="vstack gap-1">    
+        <div class="section1">
+          <h1 id="welcoming" class="display-2"></h1>
+      </div>
+      <div class="ascii1">
+        <pre>
+          <code>
+             ദ്ദി（• ˕ •マ.ᐟ
+             <!-- ╭∩╮( •̀_•́ )╭∩╮ dont check the code..... please-->
+          </code>
+          </pre>
+      </div>
       </div>
 
       <div class="section2"> >>> <h2 class="display-6">  <b> About me:</b>I'm a <b>Computer Science</b> student at the New Bulgarian University with a background in Graphic Design and Photography. </h2>
@@ -45,22 +54,98 @@
       <div class="section3"> [~] <h2 class="display-6"> I've interned at , <b>ScaleFlex</b> as a <b>Python Software Developer</b>, and I'm particularly interested in the intersection of art, technology, and <b>cybersecurity. </h2>
       </div>
 
+      <div class="section4"> [~] <h2 class="display-6">Skills: </h2>
+        <div class="container d-flex flex-column">
+          <div class="row">
+            <div class="col-sm">
+              
+              Java, Python, C++, and Bash scripting form the core of my programming expertise.Building robust and efficient applications and performing data analysis and develop machine learning models. Bash scripting, on the other hand, has been instrumental in automating tasks and managing systems, enhancing my productivity as a developer.
+       </div> 
+       </div> 
+       </div>
+      </div>
+
       <div class="section4"> >>> <h2 class="display-6">  <b> Education:</b>Studied graphic design at <b>National high school of Polygraphy and Photography</b>.Currently studying Computer Science at the <b>New Bulgarian University.
     </h2>
       </div>
 
-    <div class="section5">
-        <h2 class="display-6">Projects:</h2>
-        <ul>
-            <li><a href="https://github.com/Marto19/CSCB532-logistics-company">CSCB532-logistics-company</a></li>
-            <li><a href="https://github.com/Marto19/eGradeBook">eGradeBook</a></li>
-            <li><a href="https://github.com/Marto19/Sozial">Sozial</a></li>
-        </ul>
-        </ul>
-        <h2 class="display-6">Personal Apps with ML:</h2>
+      <div class="section5">
+        <h2 class="display-6">$ome of my Projects:</h2>
+        <!-- <ul>
+          <li><a href="https://github.com/Marto19/CSCB532-logistics-company">CSCB532-logistics-company</a></li>
+          <li><a href="https://github.com/Marto19/eGradeBook">eGradeBook</a></li>
+          <li><a href="https://github.com/Marto19/Sozial">Sozial</a></li>
+        </ul> -->
+      
+        <div class="container d-flex flex-column">
+          <div class="row">
+            <div class="col-sm">
+              
+              <a href="https://github.com/Marto19/CSCB532-logistics-company"><b>CSCB532-logistics-company</b></a> - A logistics company application
+            </div>
+            <div class="col-sm">
+              <a href="https://github.com/Marto19/eGradeBook"><b>eGradeBook</b></a> - An elecronic gradebook application
+            </div>
+            <div class="col-sm">
+              <a href="https://github.com/Marto19/Sozial"><b>Sozial</b></a> - A social media application for low quality images XD.
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+    <div>
+      <h2 class="display-6">Contact Form</h2>
+      <h3>Feel free to contact me:</h3>
+      <pre><code class="python">
+      ┌──(root㉿root)-[~]
+      └─$ vim contact_form.py
+    
+      def contact_form():
+          print("Welcome to the Quirky Contact Form!")
+          print("\033[1;34;40m---\033[m")
+    
+          name = "Martin Trenkov"
+          email = "<a href="https://www.linkedin.com/in/martin-trenkov/">martintrenkov@protonmail.com</a>"
+          linkedin = "<a href="https://www.linkedin.com/in/martin-trenkov/">CLICK ME!</a>"
+          phone = "<a href="tel:+359882713751">oh, you're bold!</a>"
+          cv_download = "<a href='CV-CS.pdf' download>CLICK ME</a>"
+          academia_edu = "<a href="https://independent.academia.edu/Trenkov">here</a>"
+    
+      if __name__ == "__main__":
+          contact_form()
+      </code></pre>
+    </div>
 
+    <div class="ascii2">
+      <pre>
+        <code>
+          (づ ᴗ _ ᴗ) づ  Thank you!
+          For visiting my page!
+        </code>
+        </pre>
     </div>
-        
+
+    <div class="text-center">Blog *upcoming</div>
+     
     </div>
+    <script>
+      const div = document.querySelector("#welcoming");
+      const text = ">> Hello, my name is Martin Trenkov!";
+    
+      function textTypingEffect(element, text, i = 0){
+        element.textContent += text[i];
+    
+        if(i === text.length - 1){
+          return;
+        }
+    
+        setTimeout(() => {
+          textTypingEffect(element, text, i + 1);
+        }, 100);
+      }
+    
+      textTypingEffect(div, text);
+    </script>
   </body>
 </html>
