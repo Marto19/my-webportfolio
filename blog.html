@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rickroll Animation</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #000;
+            overflow: hidden; /* Hide overflow during animation */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .rickroll-container {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #rickroll-video {
+            position: absolute;
+            width: 100px; /* Start small */
+            height: 56px; /* Maintain aspect ratio */
+            opacity: 0; /* Start hidden */
+        }
+    </style>
+</head>
+<body>
+    <div class="rickroll-container">
+        <iframe
+            id="rickroll-video"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+            frameborder="0"
+            allow="autoplay"
+            allowfullscreen
+        ></iframe>
+    </div>
+
+    <script>
+        const video = document.getElementById('rickroll-video');
+
+        // Start Animation
+        const animateVideo = () => {
+            let size = 100; // Initial width
+            let opacity = 0; // Initial opacity
+            let top = window.innerHeight / 2 - 28; // Center the video
+
+            const animation = setInterval(() => {
+                // Increase size
+                size += 10;
+                video.style.width = `${size}px`;
+                video.style.height = `${size * 0.5625}px`; // Maintain 16:9 aspect ratio
+                
+                // Increase opacity
+                if (opacity < 1) {
+                    opacity += 0.05;
+                    video.style.opacity = opacity;
+                }
+
+                // Stop animation when size reaches full width
+                if (size >= Math.min(window.innerWidth, window.innerHeight) * 0.8) {
+                    clearInterval(animation);
+                }
+            }, 30);
+        };
+
+        // Trigger animation after 1 second
+        setTimeout(() => {
+            video.style.left = '50%';
+            video.style.transform = 'translateX(-50%)';
+            animateVideo();
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -199,8 +199,26 @@ For visiting my page!
         </pre>
     </div>
   </h2>
-    <div class="text-center">Blog *upcomming</div>
+    <!-- <div class="text-center">Blog *upcomming</div> -->
+
+    <div class="text-center my-4">
+      <a href="https://rickroll.it/rickroll.mp4" 
+      class="blog-link" 
+      style="text-decoration: none; font-size: 1.2rem;"
+      id="rickroll-link"
+      target="_blank">Blog</a>
+  </div>
      
+  <script>
+    // Add event listener to the link
+    document.getElementById('rickroll-link').addEventListener('click', function(event) {
+        // Trigger a notification using alert
+        setTimeout(() => {
+            alert("I apologise sincerely, the blog is still upcomming");
+        }, 500); // Delay for dramatic effect
+    });
+</script>
+
     </div>
     <script>
       const div = document.querySelector("#welcoming");
