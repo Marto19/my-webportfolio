@@ -14,26 +14,6 @@
 
   <body>
     <div class="container">
-
-        <!-- <nav id="navbar" class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item">
-                    <a href="#">About Me</a>
-                  </li>
-                  <li class="breadcrumb-item">
-                    <a href="#">Library</a>
-                  </li>
-                  <li class="breadcrumb-item active" aria-current="page">
-                    <a href="#">Data</a>
-                  </li>
-                </ol>
-              </nav>
-            </div>
-          </nav> -->
-          
-
       <div class="vstack gap-1">    
         <div class="section1">
           <h1 id="welcoming" class="display-2"></h1>
@@ -96,8 +76,64 @@ hello - ദ്ദി（• ˕ •マ.ᐟ
                              **//########     ((////////**                          
                              */////######     (/////////***.                        
                                ////((####     ((////////**,,                        
-                                   /((((#     (/////////*,,.                        
-                                                 ///////***,                        
+              <style>
+        body {
+            margin: 0;
+            background-color: #000;
+            color: #33ff33; /* Green terminal style */
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #ascii-container {
+            font-size: 2rem;
+            white-space: pre;
+            text-align: center;
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="ascii-container"></div>
+
+    <script>
+        const asciiText = "hello - ദ്ദി（• ˕ •マ.ᐟ";
+        const container = document.getElementById('ascii-container');
+        let index = 0;
+
+        function typeAnimation() {
+            // Add the next character to the container
+            container.innerHTML += asciiText[index];
+
+            // Add a blinking cursor (optional)
+            if (index === asciiText.length - 1) {
+                container.innerHTML += `<span class="blink">_</span>`;
+            }
+
+            index++;
+
+            // Continue until the full text is displayed
+            if (index < asciiText.length) {
+                setTimeout(typeAnimation, 150); // Adjust speed of typing here
+            }
+        }
+
+        // Start the typing animation
+        typeAnimation();
+    </script>***,                        
                                                   #%&&&/****                        
                                             ##%%%%%%%%&&&@&*                        
                                     *////(((((((((####%%%%&&                        
