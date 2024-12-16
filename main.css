@@ -151,7 +151,7 @@ h2.display-5 {
 /* For smaller screens (mobiles) */
 @media (max-width: 768px) {
     .section3{
-        height: 85vh; /* Larger height for small screens */
+        height: 100vh; /* Larger height for small screens */
     }
 }
 
