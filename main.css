@@ -151,7 +151,7 @@ h2.display-5 {
 /* For smaller screens (mobiles) */
 @media (max-width: 768px) {
     .section3{
-        height: 100vh; /* Larger height for small screens */
+        height: 85vh; /* Larger height for small screens */
     }
 }
 
@@ -159,6 +159,7 @@ h2.display-5 {
 @media (max-width: 480px) {
     .section3{
         height: 100vh; /* Full height for very small screens */
+        margin-bottom: 50%;
     }
 }
 
