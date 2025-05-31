@@ -29,12 +29,76 @@
             line-height: 1.6;
             font-size: 14px;
             overflow-x: hidden;
+            cursor: none;
+        }
+
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+            mix-blend-mode: difference;
+        }
+
+        .cursor-trail {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            opacity: 0.7;
+        }
+
+        /* Matrix Rain Background */
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.1;
+        }
+
+        /* Floating Particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 1; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 0.5; }
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
+            position: relative;
+            z-index: 10;
         }
 
         /* Header */
@@ -58,6 +122,18 @@
             font-size: 1.2rem;
             font-weight: 600;
             color: var(--accent);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo::after {
+            content: '_';
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
         }
 
         .nav-links {
@@ -69,49 +145,166 @@
         .nav-links a {
             color: var(--text-secondary);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
             position: relative;
+            padding: 0.5rem 1rem;
+            border: 1px solid transparent;
         }
 
         .nav-links a:hover {
             color: var(--accent);
+            border-color: var(--accent);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+            text-shadow: 0 0 10px var(--accent);
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--accent);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* Hero Section */
+        /* Hero Section with Terminal */
         .hero {
             padding: 4rem 0;
             text-align: center;
+            position: relative;
         }
 
-        .hero-greeting {
-            font-size: clamp(1rem, 3vw, 1.2rem);
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
+        .terminal-window {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin: 2rem auto;
+            max-width: 800px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .terminal-header {
+            background: #2d2d2d;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .terminal-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .terminal-button.close { background: #ff5f56; }
+        .terminal-button.minimize { background: #ffbd2e; }
+        .terminal-button.maximize { background: #27ca3f; }
+
+        .terminal-content {
+            padding: 1.5rem;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            min-height: 200px;
+        }
+
+        .terminal-line {
+            margin-bottom: 0.5rem;
             opacity: 0;
-            animation: fadeInUp 0.8s ease forwards;
+            animation: terminalFadeIn 0.5s ease forwards;
         }
 
+        .terminal-line:nth-child(1) { animation-delay: 0.5s; }
+        .terminal-line:nth-child(2) { animation-delay: 1s; }
+        .terminal-line:nth-child(3) { animation-delay: 1.5s; }
+        .terminal-line:nth-child(4) { animation-delay: 2s; }
+        .terminal-line:nth-child(5) { animation-delay: 2.5s; }
+
+        @keyframes terminalFadeIn {
+            to { opacity: 1; }
+        }
+
+        .prompt {
+            color: var(--accent);
+        }
+
+        .command {
+            color: #ff79c6;
+        }
+
+        .output {
+            color: var(--text-secondary);
+        }
+
+        .typing-cursor {
+            background: var(--accent);
+            animation: blink 1s infinite;
+        }
+
+        /* Interactive Terminal Game */
+        .mini-terminal {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 2rem 0;
+            max-width: 600px;
+        }
+
+        .terminal-input {
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            outline: none;
+            width: 100%;
+        }
+
+        .game-output {
+            margin-bottom: 1rem;
+            min-height: 100px;
+            font-size: 0.8rem;
+        }
+
+        /* Glitch Effect */
+        .glitch {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch:hover::before,
+        .glitch:hover::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch:hover::before {
+            animation: glitch 0.3s infinite;
+            color: #ff0000;
+            z-index: -1;
+        }
+
+        .glitch:hover::after {
+            animation: glitch 0.3s infinite reverse;
+            color: #00ffff;
+            z-index: -2;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+
+        /* 3D Floating Cards */
         .hero-name {
             font-size: clamp(2rem, 8vw, 4rem);
             font-weight: 700;
             margin-bottom: 1rem;
             opacity: 0;
             animation: fadeInUp 0.8s ease 0.2s forwards;
+            perspective: 1000px;
+            transform-style: preserve-3d;
         }
 
         .hero-title {
@@ -122,19 +315,11 @@
             animation: fadeInUp 0.8s ease 0.4s forwards;
         }
 
-        .hero-description {
-            max-width: 600px;
-            margin: 0 auto 3rem;
-            color: var(--text-secondary);
-            font-size: 1rem;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease 0.6s forwards;
-        }
-
         /* Sections */
         .section {
             padding: 4rem 0;
             border-bottom: 1px solid var(--border);
+            position: relative;
         }
 
         .section:last-child {
@@ -153,9 +338,48 @@
         .section-title::before {
             content: '>';
             color: var(--text-secondary);
+            animation: pulse 2s infinite;
         }
 
-        /* Experience Cards */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Interactive Code Blocks */
+        .code-block {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .code-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+            border-color: var(--accent);
+        }
+
+        .code-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .code-block:hover::before {
+            left: 100%;
+        }
+
+        /* Experience Cards with 3D effect */
         .experience-grid {
             display: grid;
             gap: 2rem;
@@ -169,27 +393,14 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-        }
-
-        .experience-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--accent);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .experience-card:hover::before {
-            transform: scaleX(1);
+            transform-style: preserve-3d;
         }
 
         .experience-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.1);
+            transform: rotateX(5deg) rotateY(5deg) translateZ(20px);
+            box-shadow: 
+                0 20px 40px rgba(0, 255, 136, 0.1),
+                0 0 0 1px var(--accent);
         }
 
         .experience-header {
@@ -214,6 +425,12 @@
             padding: 0.3rem 0.8rem;
             border-radius: 4px;
             border: 1px solid var(--accent);
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 0 5px var(--accent); }
+            to { box-shadow: 0 0 20px var(--accent); }
         }
 
         .role {
@@ -228,7 +445,7 @@
             line-height: 1.7;
         }
 
-        /* Skills */
+        /* Skills with Progress Bars */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -240,6 +457,24 @@
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-category::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
+        }
+
+        .skill-category:hover::after {
+            transform: scaleX(1);
         }
 
         .skill-category h3 {
@@ -253,7 +488,7 @@
             line-height: 1.7;
         }
 
-        /* Projects */
+        /* Projects with Hover Effects */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -273,28 +508,35 @@
         .project-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--accent);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(transparent, var(--accent), transparent 30%);
+            animation: rotate 4s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .project-card:hover::before {
-            transform: scaleX(1);
+            opacity: 0.1;
+        }
+
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
         }
 
         .project-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 255, 136, 0.2);
         }
 
         .project-title {
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
         }
 
         .project-title a {
@@ -305,12 +547,15 @@
 
         .project-title a:hover {
             color: var(--accent);
+            text-shadow: 0 0 10px var(--accent);
         }
 
         .project-description {
             color: var(--text-secondary);
             margin-bottom: 1rem;
             line-height: 1.6;
+            position: relative;
+            z-index: 1;
         }
 
         .project-link {
@@ -320,11 +565,13 @@
             color: var(--accent);
             text-decoration: none;
             font-size: 0.9rem;
-            transition: opacity 0.3s ease;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
         }
 
         .project-link:hover {
-            opacity: 0.8;
+            transform: translateX(5px);
         }
 
         /* Contact */
@@ -341,17 +588,38 @@
             padding: 1.5rem;
             text-align: center;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, var(--accent-dim), transparent);
+            transition: all 0.5s ease;
+            transform: translate(-50%, -50%);
+        }
+
+        .contact-item:hover::before {
+            width: 300px;
+            height: 300px;
         }
 
         .contact-item:hover {
             border-color: var(--accent);
-            background: var(--accent-dim);
+            transform: scale(1.05);
         }
 
         .contact-item a {
             color: var(--text-primary);
             text-decoration: none;
             display: block;
+            position: relative;
+            z-index: 1;
         }
 
         .contact-item:hover a {
@@ -381,6 +649,7 @@
             line-height: 1.2;
             margin-bottom: 1rem;
             color: var(--accent);
+            animation: pulse 3s infinite;
         }
 
         /* Animations */
@@ -395,15 +664,6 @@
             }
         }
 
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        @keyframes blink {
-            50% { border-color: transparent; }
-        }
-
         /* Mobile Navigation */
         .mobile-menu-button {
             display: none;
@@ -416,6 +676,14 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            body {
+                cursor: auto;
+            }
+            
+            .cursor, .cursor-trail {
+                display: none;
+            }
+
             .container {
                 padding: 0 1rem;
             }
@@ -466,6 +734,10 @@
             .contact-grid {
                 grid-template-columns: 1fr;
             }
+
+            .experience-card:hover {
+                transform: translateY(-5px);
+            }
         }
 
         /* Smooth Scrolling */
@@ -490,9 +762,51 @@
         ::-webkit-scrollbar-thumb:hover {
             background: var(--accent);
         }
+
+        /* Loading Screen */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-text {
+            font-family: var(--font-mono);
+            font-size: 1.5rem;
+            color: var(--accent);
+            animation: typewriter 2s steps(20) infinite;
+        }
+
+        @keyframes typewriter {
+            0% { width: 0; }
+            50% { width: 100%; }
+            100% { width: 0; }
+        }
     </style>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-text">Initializing...</div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    
+    <!-- Matrix Background -->
+    <canvas class="matrix-bg" id="matrixCanvas"></canvas>
+    
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -504,6 +818,7 @@
                     <li><a href="#experience">experience</a></li>
                     <li><a href="#skills">skills</a></li>
                     <li><a href="#projects">projects</a></li>
+                    <li><a href="#terminal">terminal</a></li>
                     <li><a href="#contact">contact</a></li>
                 </ul>
             </nav>
@@ -513,13 +828,44 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-greeting">hello world! ദ്ദി（• ˕ •マ.ᐟ</div>
-            <h1 class="hero-name">Martin Trenkov</h1>
-            <div class="hero-title">Computer Science Student & Developer</div>
-            <p class="hero-description">
-                Passionate about the intersection of art, technology, and cybersecurity. 
-                Currently studying at New Bulgarian University with a background in Graphic Design and Photography.
-            </p>
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-button close"></div>
+                    <div class="terminal-button minimize"></div>
+                    <div class="terminal-button maximize"></div>
+                    <span style="margin-left: 1rem; color: #888;">martin@portfolio:~$</span>
+                </div>
+                <div class="terminal-content">
+                    <div class="terminal-line">
+                        <span class="prompt">martin@portfolio:~$</span> 
+                        <span class="command">whoami</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="output">Martin Trenkov - Software Engineer at IBM</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">martin@portfolio:~$</span> 
+                        <span class="command">cat skills.txt</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="output">Java | Python | C++ | Bash | System Administration</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">martin@portfolio:~$</span> 
+                        <span class="command">echo "Hello World! ദ്ദി（• ˕ •マ.ᐟ"</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="output">Hello World! ദ്ദി（• ˕ •マ.ᐟ</span>
+                    </div>
+                    <div class="terminal-line">
+                        <span class="prompt">martin@portfolio:~$</span> 
+                        <span class="typing-cursor">|</span>
+                    </div>
+                </div>
+            </div>
+            
+            <h1 class="hero-name glitch" data-text="Martin Trenkov">Martin Trenkov</h1>
+            <div class="hero-title">Computer Science Student & Software Engineer</div>
         </div>
     </section>
 
@@ -527,13 +873,15 @@
     <section class="section" id="about">
         <div class="container">
             <h2 class="section-title">about_me</h2>
-            <div class="description">
-                I'm a Computer Science student at the New Bulgarian University with a unique background that blends 
-                technical expertise with creative vision. My journey started in graphic design and photography at the 
-                National High School of Polygraphy and Photography, which gave me a strong foundation in visual 
-                communication and attention to detail. This creative background now enhances my approach to software 
-                development, allowing me to create solutions that are not only functional but also user-friendly and 
-                aesthetically pleasing.
+            <div class="code-block">
+                <div class="description">
+                    I'm a Computer Science student at the New Bulgarian University with a unique background that blends 
+                    technical expertise with creative vision. My journey started in graphic design and photography at the 
+                    National High School of Polygraphy and Photography, which gave me a strong foundation in visual 
+                    communication and attention to detail. This creative background now enhances my approach to software 
+                    development, allowing me to create solutions that are not only functional but also user-friendly and 
+                    aesthetically pleasing.
+                </div>
             </div>
         </div>
     </section>
@@ -679,6 +1027,24 @@
         </div>
     </section>
 
+    <!-- Interactive Terminal Game Section -->
+    <section class="section" id="terminal">
+        <div class="container">
+            <h2 class="section-title">interactive_terminal</h2>
+            <div class="mini-terminal">
+                <div class="game-output" id="gameOutput">
+                    <div style="color: var(--accent);">Welcome to Martin's Interactive Terminal!</div>
+                    <div style="color: var(--text-secondary);">Try commands: help, about, skills, joke, matrix, clear</div>
+                    <div style="color: var(--text-secondary);">Type 'konami' for a surprise...</div>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <span style="color: var(--accent);">guest@martin-portfolio:~$ </span>
+                    <input type="text" class="terminal-input" id="terminalInput" placeholder="Type a command..." autocomplete="off">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="section" id="contact">
         <div class="container">
@@ -726,6 +1092,200 @@
     </footer>
 
     <script>
+        // Loading Screen
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loadingScreen').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loadingScreen').style.display = 'none';
+                }, 500);
+            }, 1500);
+        });
+
+        // Custom Cursor
+        const cursor = document.querySelector('.cursor');
+        const cursorTrails = [];
+        
+        // Create cursor trails
+        for (let i = 0; i < 5; i++) {
+            const trail = document.createElement('div');
+            trail.className = 'cursor-trail';
+            document.body.appendChild(trail);
+            cursorTrails.push(trail);
+        }
+
+        let mouseX = 0, mouseY = 0;
+        let cursorX = 0, cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animateCursor() {
+            cursorX += (mouseX - cursorX) * 0.1;
+            cursorY += (mouseY - cursorY) * 0.1;
+            
+            cursor.style.left = cursorX + 'px';
+            cursor.style.top = cursorY + 'px';
+            
+            // Animate trails
+            cursorTrails.forEach((trail, index) => {
+                const delay = (index + 1) * 0.1;
+                const trailX = cursorX - (mouseX - cursorX) * delay;
+                const trailY = cursorY - (mouseY - cursorY) * delay;
+                
+                trail.style.left = trailX + 'px';
+                trail.style.top = trailY + 'px';
+                trail.style.opacity = 0.7 - index * 0.1;
+            });
+            
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        // Matrix Rain Effect
+        const canvas = document.getElementById('matrixCanvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
+        const matrixArray = matrix.split("");
+
+        const fontSize = 10;
+        const columns = canvas.width / fontSize;
+
+        const drops = [];
+        for (let x = 0; x < columns; x++) {
+            drops[x] = 1;
+        }
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#00ff88';
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(drawMatrix, 35);
+
+        // Resize canvas on window resize
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Floating Particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+        createParticles();
+
+        // Interactive Terminal Game
+        const terminalInput = document.getElementById('terminalInput');
+        const gameOutput = document.getElementById('gameOutput');
+        let konamiSequence = [];
+        const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+
+        const commands = {
+            help: "Available commands: help, about, skills, joke, matrix, clear, konami, hack, whoami, ls",
+            about: "I'm Martin Trenkov, a passionate developer who loves creating interactive experiences!",
+            skills: "Java | Python | C++ | Bash | System Administration | Creative Problem Solving",
+            joke: "Why do programmers prefer dark mode? Because light attracts bugs! 🐛",
+            matrix: "Wake up, Neo... The Matrix has you... Follow the white rabbit. 🐰",
+            clear: "CLEAR_COMMAND",
+            konami: "🎮 KONAMI CODE ACTIVATED! You've unlocked the secret developer mode! 🎮",
+            hack: "Initiating hack sequence... Access granted. Welcome to the mainframe. 💀",
+            whoami: "martin-trenkov: Software Engineer, Creative Thinker, Matrix Enthusiast",
+            ls: "skills.txt  projects/  experience.log  secrets.hidden  README.md"
+        };
+
+        terminalInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const command = terminalInput.value.toLowerCase().trim();
+                const outputDiv = document.createElement('div');
+                outputDiv.innerHTML = `<span style="color: var(--accent);">guest@martin-portfolio:~$ </span>${terminalInput.value}`;
+                gameOutput.appendChild(outputDiv);
+
+                const responseDiv = document.createElement('div');
+                responseDiv.style.color = 'var(--text-secondary)';
+                responseDiv.style.marginBottom = '0.5rem';
+
+                if (commands[command]) {
+                    if (command === 'clear') {
+                        gameOutput.innerHTML = `
+                            <div style="color: var(--accent);">Welcome to Martin's Interactive Terminal!</div>
+                            <div style="color: var(--text-secondary);">Try commands: help, about, skills, joke, matrix, clear</div>
+                            <div style="color: var(--text-secondary);">Type 'konami' for a surprise...</div>
+                        `;
+                    } else {
+                        responseDiv.textContent = commands[command];
+                        gameOutput.appendChild(responseDiv);
+                    }
+                } else {
+                    responseDiv.innerHTML = `<span style="color: #ff6b6b;">Command not found: ${command}. Type 'help' for available commands.</span>`;
+                    gameOutput.appendChild(responseDiv);
+                }
+
+                terminalInput.value = '';
+                gameOutput.scrollTop = gameOutput.scrollHeight;
+            }
+        });
+
+        // Konami Code Detection
+        document.addEventListener('keydown', (e) => {
+            konamiSequence.push(e.code);
+            konamiSequence = konamiSequence.slice(-konamiCode.length);
+
+            if (konamiSequence.join(',') === konamiCode.join(',')) {
+                triggerKonamiEasterEgg();
+                konamiSequence = [];
+            }
+        });
+
+        function triggerKonamiEasterEgg() {
+            document.body.style.animation = 'rainbow 2s infinite';
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes rainbow {
+                    0% { filter: hue-rotate(0deg); }
+                    100% { filter: hue-rotate(360deg); }
+                }
+            `;
+            document.head.appendChild(style);
+
+            setTimeout(() => {
+                document.body.style.animation = '';
+                style.remove();
+            }, 5000);
+
+            alert('🎉 KONAMI CODE ACTIVATED! Rainbow mode enabled! 🌈');
+        }
+
         // Mobile menu toggle
         function toggleMobileMenu() {
             const navLinks = document.getElementById('navLinks');
@@ -776,6 +1336,27 @@
             observer.observe(el);
         });
 
+        // 3D Tilt Effect for Cards
+        document.querySelectorAll('.experience-card, .project-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(20px)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+            });
+        });
+
         // Easter egg for blog link (keeping your rickroll)
         const blogLink = document.querySelector('a[href*="rickroll"]');
         if (blogLink) {
@@ -785,6 +1366,17 @@
                 }, 500);
             });
         }
+
+        // Sound effect function (optional - you can add sound files)
+        function playSound(type) {
+            // You can add sound effects here
+            console.log(`Playing ${type} sound effect`);
+        }
+
+        // Add click sound to buttons
+        document.querySelectorAll('a, button').forEach(element => {
+            element.addEventListener('click', () => playSound('click'));
+        });
     </script>
 </body>
 </html>
