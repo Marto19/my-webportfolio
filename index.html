@@ -763,41 +763,9 @@
             background: var(--accent);
         }
 
-        /* Loading Screen */
-        .loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--bg-primary);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 10000;
-            transition: opacity 0.5s ease;
-        }
-
-        .loading-text {
-            font-family: var(--font-mono);
-            font-size: 1.5rem;
-            color: var(--accent);
-            animation: typewriter 2s steps(20) infinite;
-        }
-
-        @keyframes typewriter {
-            0% { width: 0; }
-            50% { width: 100%; }
-            100% { width: 0; }
-        }
     </style>
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-text">Initializing...</div>
-    </div>
-
     <!-- Custom Cursor -->
     <div class="cursor"></div>
     
