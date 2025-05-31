@@ -1197,55 +1197,8 @@
         createParticles();
 
         // Interactive Terminal Game
-        const terminalInput = document.getElementById('terminalInput');
-        const gameOutput = document.getElementById('gameOutput');
         let konamiSequence = [];
         const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
-
-        const commands = {
-            help: "Available commands: help, about, skills, joke, matrix, clear, konami, hack, whoami, ls",
-            about: "I'm Martin Trenkov, a passionate developer who loves creating interactive experiences!",
-            skills: "Java | Python | C++ | Bash | System Administration | Creative Problem Solving",
-            joke: "Why do programmers prefer dark mode? Because light attracts bugs! 🐛",
-            matrix: "Wake up, Neo... The Matrix has you... Follow the white rabbit. 🐰",
-            clear: "CLEAR_COMMAND",
-            konami: "🎮 KONAMI CODE ACTIVATED! You've unlocked the secret developer mode! 🎮",
-            hack: "Initiating hack sequence... Access granted. Welcome to the mainframe. 💀",
-            whoami: "martin-trenkov: Software Engineer, Creative Thinker, Matrix Enthusiast",
-            ls: "skills.txt  projects/  experience.log  secrets.hidden  README.md"
-        };
-
-        terminalInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                const command = terminalInput.value.toLowerCase().trim();
-                const outputDiv = document.createElement('div');
-                outputDiv.innerHTML = `<span style="color: var(--accent);">guest@martin-portfolio:~$ </span>${terminalInput.value}`;
-                gameOutput.appendChild(outputDiv);
-
-                const responseDiv = document.createElement('div');
-                responseDiv.style.color = 'var(--text-secondary)';
-                responseDiv.style.marginBottom = '0.5rem';
-
-                if (commands[command]) {
-                    if (command === 'clear') {
-                        gameOutput.innerHTML = `
-                            <div style="color: var(--accent);">Welcome to Martin's Interactive Terminal!</div>
-                            <div style="color: var(--text-secondary);">Try commands: help, about, skills, joke, matrix, clear</div>
-                            <div style="color: var(--text-secondary);">Type 'konami' for a surprise...</div>
-                        `;
-                    } else {
-                        responseDiv.textContent = commands[command];
-                        gameOutput.appendChild(responseDiv);
-                    }
-                } else {
-                    responseDiv.innerHTML = `<span style="color: #ff6b6b;">Command not found: ${command}. Type 'help' for available commands.</span>`;
-                    gameOutput.appendChild(responseDiv);
-                }
-
-                terminalInput.value = '';
-                gameOutput.scrollTop = gameOutput.scrollHeight;
-            }
-        });
 
         // Konami Code Detection
         document.addEventListener('keydown', (e) => {
