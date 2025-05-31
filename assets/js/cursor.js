@@ -20,11 +20,12 @@ export function initializeCursor() {
     });
 
     function animateCursor() {
-        cursorX += (mouseX - cursorX) * 0.1;
-        cursorY += (mouseY - cursorY) * 0.1;
+        // Make cursor movement instant for better responsiveness
+        cursorX = mouseX;
+        cursorY = mouseY;
         
-        cursor.style.left = cursorX + 'px';
-        cursor.style.top = cursorY + 'px';
+        cursor.style.left = (cursorX - 10) + 'px'; // Offset by half the cursor width
+        cursor.style.top = (cursorY - 10) + 'px'; // Offset by half the cursor height
         
         // Animate trails
         cursorTrails.forEach((trail, index) => {
