@@ -795,7 +795,7 @@
 <body>
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
-        <div class="loading-text">Initializing...</div>
+        <div class="loading-text" data-i18n="loading">Initializing...</div>
     </div>
 
     <!-- Custom Cursor -->
@@ -814,12 +814,12 @@
                 <div class="logo">~/martin-trenkov</div>
                 <button class="mobile-menu-button" onclick="toggleMobileMenu()">☰</button>
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#experience">experience</a></li>
-                    <li><a href="#skills">skills</a></li>
-                    <li><a href="#projects">projects</a></li>
-                    <li><a href="#terminal">terminal</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a href="#about" data-i18n="about">about</a></li>
+                    <li><a href="#experience" data-i18n="experience">experience</a></li>
+                    <li><a href="#skills" data-i18n="skills">skills</a></li>
+                    <li><a href="#projects" data-i18n="projects">projects</a></li>
+                    <li><a href="#terminal" data-i18n="terminal">terminal</a></li>
+                    <li><a href="#contact" data-i18n="contact">contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -838,10 +838,10 @@
                 <div class="terminal-content">
                     <div class="terminal-line">
                         <span class="prompt">martin@portfolio:~$</span> 
-                        <span class="command">whoami</span>
+                        <span class="command" data-i18n="whoami">whoami</span>
                     </div>
                     <div class="terminal-line">
-                        <span class="output">Martin Trenkov - Software Engineer at IBM</span>
+                        <span class="output" data-i18n="roleOutput">Martin Trenkov - Software Engineer at IBM</span>
                     </div>
                     <div class="terminal-line">
                         <span class="prompt">martin@portfolio:~$</span> 
@@ -872,9 +872,9 @@
     <!-- About Section -->
     <section class="section" id="about">
         <div class="container">
-            <h2 class="section-title">about_me</h2>
+            <h2 class="section-title" data-i18n="about_me">about_me</h2>
             <div class="code-block">
-                <div class="description">
+                <div class="description" data-i18n="aboutText">
                     I'm a Computer Science student at the New Bulgarian University with a unique background that blends 
                     technical expertise with creative vision. My journey started in graphic design and photography at the 
                     National High School of Polygraphy and Photography, which gave me a strong foundation in visual 
@@ -889,14 +889,14 @@
     <!-- Experience Section -->
     <section class="section" id="experience">
         <div class="container">
-            <h2 class="section-title">experience</h2>
+            <h2 class="section-title" data-i18n="experienceTitle">experience</h2>
             <div class="experience-grid">
                 <div class="experience-card">
                     <div class="experience-header">
                         <div class="company-name">IBM</div>
                         <div class="date-range">Jan 2025 - Present</div>
                     </div>
-                    <div class="role">Software Engineer</div>
+                    <div class="role" data-i18n="ibmTitle">Software Engineer</div>
                     <div class="description">
                         Currently working as a Software Engineer at IBM, leveraging my previous internship experience 
                         to contribute to enterprise-level software solutions. Building upon my expertise in IBM ESS, 
@@ -910,7 +910,7 @@
                         <div class="company-name">IBM</div>
                         <div class="date-range">Jul 2024 - Dec 2024</div>
                     </div>
-                    <div class="role">Server & Storage (ESS) Intern</div>
+                    <div class="role" data-i18n="ibmIntern">Server & Storage (ESS) Intern</div>
                     <div class="description">
                         Gained hands-on experience with IBM ESS, Spectrum Scale (GPFS), and Red Hat Enterprise Linux (RHEL). 
                         Developed skills in data management, ACLs, and automation through Bash scripting, while mastering 
@@ -925,7 +925,7 @@
                         <div class="company-name">ScaleFlex</div>
                         <div class="date-range">Jul 2023 - Oct 2023</div>
                     </div>
-                    <div class="role">Python Software Developer Intern</div>
+                    <div class="role" data-i18n="scaleflexIntern">Python Software Developer Intern</div>
                     <div class="description">
                         Worked on internal projects aimed to facilitate the work of the quality assurance team. 
                         Gained valuable knowledge in the field of image processing as well as extensive experience 
@@ -942,8 +942,8 @@
             <h2 class="section-title">skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-list">
+                    <h3 data-i18n="programmingLanguages">Programming Languages</h3>
+                    <div class="skill-list" data-i18n="programmingDescription">
                         Java, Python, C++, Bash scripting form the core of my programming expertise. 
                         I focus on building robust and efficient applications, performing data analysis, 
                         and developing machine learning models.
@@ -951,24 +951,24 @@
                 </div>
                 
                 <div class="skill-category">
-                    <h3>Technologies & Tools</h3>
-                    <div class="skill-list">
+                    <h3 data-i18n="technologiesTools">Technologies & Tools</h3>
+                    <div class="skill-list" data-i18n="technologiesDescription">
                         IBM ESS, Spectrum Scale (GPFS), Red Hat Enterprise Linux (RHEL), Salesforce Lightning, 
                         Git, Docker, Linux system administration
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Specializations</h3>
-                    <div class="skill-list">
+                    <h3 data-i18n="specializations">Specializations</h3>
+                    <div class="skill-list" data-i18n="specializationsDescription">
                         System Administration, Data Management, Image Processing, SaaS Development, 
                         Automation & Scripting, Cybersecurity
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Creative Background</h3>
-                    <div class="skill-list">
+                    <h3 data-i18n="creativeBackground">Creative Background</h3>
+                    <div class="skill-list" data-i18n="creativeDescription">
                         Graphic Design, Photography, Visual Communication, UI/UX Principles, 
                         Creative Problem Solving
                     </div>
@@ -980,7 +980,7 @@
     <!-- Projects Section -->
     <section class="section" id="projects">
         <div class="container">
-            <h2 class="section-title">projects</h2>
+            <h2 class="section-title" data-i18n="projectsTitle">projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-title">
@@ -992,7 +992,7 @@
                         A comprehensive logistics company application built to manage and optimize supply chain operations.
                     </div>
                     <a href="https://github.com/Marto19/CSCB532-logistics-company" target="_blank" class="project-link">
-                        View on GitHub →
+                        <span data-i18n="viewOnGithub">View on GitHub →</span>
                     </a>
                 </div>
 
@@ -1006,7 +1006,7 @@
                         An electronic gradebook application designed to streamline academic record management and student progress tracking.
                     </div>
                     <a href="https://github.com/Marto19/eGradeBook" target="_blank" class="project-link">
-                        View on GitHub →
+                        <span data-i18n="viewOnGithub">View on GitHub →</span>
                     </a>
                 </div>
 
@@ -1020,7 +1020,7 @@
                         A social media application for low quality images - because sometimes imperfection is perfect! XD
                     </div>
                     <a href="https://github.com/Marto19/Sozial" target="_blank" class="project-link">
-                        View on GitHub →
+                        <span data-i18n="viewOnGithub">View on GitHub →</span>
                     </a>
                 </div>
             </div>
@@ -1033,9 +1033,9 @@
             <h2 class="section-title">interactive_terminal</h2>
             <div class="mini-terminal">
                 <div class="game-output" id="gameOutput">
-                    <div style="color: var(--accent);">Welcome to Martin's Interactive Terminal!</div>
-                    <div style="color: var(--text-secondary);">Try commands: help, about, skills, joke, matrix, clear</div>
-                    <div style="color: var(--text-secondary);">Type 'konami' for a surprise...</div>
+                    <div style="color: var(--accent);" data-i18n="terminalWelcome">Welcome to Martin's Interactive Terminal!</div>
+                    <div style="color: var(--text-secondary);" data-i18n="terminalCommands">Try commands: help, about, skills, joke, matrix, clear</div>
+                    <div style="color: var(--text-secondary);" data-i18n="terminalKonami">Type 'konami' for a surprise...</div>
                 </div>
                 <div style="display: flex; align-items: center;">
                     <span style="color: var(--accent);">guest@martin-portfolio:~$ </span>
@@ -1084,10 +1084,10 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-ascii">
+            <div class="footer-ascii" data-i18n="thankYou">
 (づ ᴗ _ᴗ)づ Thank you for visiting!
             </div>
-            <div>© 2025 Martin Trenkov</div>
+            <div data-i18n="copyright">© 2025 Martin Trenkov</div>
         </div>
     </footer>
 
