@@ -1,281 +1,790 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Martin Trenkov</title>
-    <link rel="stylesheet" href="main.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-  </head>
-
-
-  <body>
-    <div class="container">
-      <div class="vstack gap-1">    
-        <div class="section1">
-          <h1 id="welcoming" class="display-2"></h1>
-      </div>
-      <div id="ascii1" class="col-xs-4 col-sm-6 col-md-8 col-lg-10">
-        <pre>
-          <code >
-hello - ദ്ദി（• ˕ •マ.ᐟ
-             <!-- ╭∩╮( •̀_•́ )╭∩╮ dont check the code..... please-->
-          </code>
-        </pre>
-      </div>
-      </div>
-
-      <div class="section2"> >>> <h2 class="display-5">  <b> About me:</b>I'm a <b>Computer Science</b> student at the New Bulgarian University with a background in Graphic Design and Photography. </h2>
-      </div>
-
-
-      <div class="experience-container text-center my-4">
-        <div class="line"></div> <!-- Top Line -->
-        <h2 class="display-5">EXPERIENCE</h2>
-    </div>
-    
-
-      <!-- <div class="ascii-art-container">
-        <pre class="retro-ascii">
-    ███████████  ████████████      ████████      ████████
-    ███████████  ███████████████   █████████    █████████
-       █████        ████   █████     ████████  ████████
-       █████        ███████████      ████  ███ ███ ████
-       █████        ███████████      ████  ███████ ████
-       █████        ████   █████     ████   █████  ████
-    ███████████  ███████████████   ██████    ███   ██████
-    ███████████  ████████████      ██████     █    ██████
-        </pre>
-    </div> -->
-
-    <h1>IBM</h1>
-
-
-    <div id="date-container" class="retro-dates">From: 01.07.2024 To: 31.12.2024</div>    
-
-
-      <div class="section3"> [~] <h2 class="display-5"> During my IBM internship as a Server & Storage (ESS) intern, I gained hands-on experience with IBM ESS, Spectrum Scale (GPFS), and Red Hat Enterprise Linux (RHEL). I developed skills in data management, ACLs, and automation through Bash scripting, while mastering tools like AFM for efficient data transfers. I also worked with Salesforce Lightning, enhancing system integration and optimization. This role significantly strengthened my expertise in enterprise storage and system administration. </h2>
-      </div>
-<!-- 
-      <div class="ascii-art-container">
-        <pre class="retro-ascii2">
-                                                      ,,,,.
-                                               ,,,,,,,,,,...                        
-                                       ,,,,*****,,,,,,,.....                        
-                                  ((((////////********,,....                        
-                              *((((((//////////*****,,,,,..                         
-                             #((((((////////////**,,,,,,.                           
-                             ##(((((((/////////***,                                
-                             /#%###((((((((/,                                       
-                             /////###(                                              
-                             *///((((((##                                           
-                             **///#######     (//////                               
-                             **//########     ((////////**                          
-                             */////######     (/////////***.                        
-                               ////((####     ((////////**,,                        
-              <style>
-        body {
+    <style>
+        * {
             margin: 0;
-            background-color: #000;
-            color: #33ff33; /* Green terminal style */
-            font-family: 'Courier New', monospace;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        #ascii-container {
-            font-size: 2rem;
-            white-space: pre;
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --accent: #00ff88;
+            --accent-dim: rgba(0, 255, 136, 0.1);
+            --border: #333333;
+            --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Consolas', monospace;
+        }
+
+        body {
+            font-family: var(--font-mono);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-size: 14px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        .header {
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
             text-align: center;
         }
 
-        .blink {
-            animation: blink 1s infinite;
+        .hero-greeting {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero-name {
+            font-size: clamp(2rem, 8vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+        }
+
+        .hero-title {
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
+            color: var(--accent);
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+        }
+
+        .hero-description {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 2rem;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-title::before {
+            content: '>';
+            color: var(--text-secondary);
+        }
+
+        /* Experience Cards */
+        .experience-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .experience-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .experience-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .experience-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.1);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .company-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .date-range {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            background: var(--accent-dim);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            border: 1px solid var(--accent);
+        }
+
+        .role {
+            color: var(--accent);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .skill-category h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .skill-list {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.1);
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-title a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .project-title a:hover {
+            color: var(--accent);
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-link:hover {
+            opacity: 0.8;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-item {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            border-color: var(--accent);
+            background: var(--accent-dim);
+        }
+
+        .contact-item a {
+            color: var(--text-primary);
+            text-decoration: none;
+            display: block;
+        }
+
+        .contact-item:hover a {
+            color: var(--accent);
+        }
+
+        .contact-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-value {
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-ascii {
+            font-size: 0.8rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
         }
 
         @keyframes blink {
-            50% {
-                opacity: 0;
+            50% { border-color: transparent; }
+        }
+
+        /* Mobile Navigation */
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
             }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--bg-primary);
+                border: 1px solid var(--border);
+                border-top: none;
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-button {
+                display: block;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .hero {
+                padding: 3rem 0;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
         }
     </style>
 </head>
 <body>
-    <div id="ascii-container"></div>
-
-    <script>
-        const asciiText = "hello - ദ്ദി（• ˕ •マ.ᐟ";
-        const container = document.getElementById('ascii-container');
-        let index = 0;
-
-        function typeAnimation() {
-            // Add the next character to the container
-            container.innerHTML += asciiText[index];
-
-            // Add a blinking cursor (optional)
-            if (index === asciiText.length - 1) {
-                container.innerHTML += `<span class="blink">_</span>`;
-            }
-
-            index++;
-
-            // Continue until the full text is displayed
-            if (index < asciiText.length) {
-                setTimeout(typeAnimation, 150); // Adjust speed of typing here
-            }
-        }
-
-        // Start the typing animation
-        typeAnimation();
-    </script>***,                        
-                                                  #%&&&/****                        
-                                            ##%%%%%%%%&&&@&*                        
-                                    *////(((((((((####%%%%&&                        
-                                */////((((((((((((((#%%%%%%%                        
-                              *****////(((((((((((((%%%%%%                          
-                             ****//////(((((((((((####%                             
-                             ***********/////////*                                  
-                             ************/                                          
-                             *****                                                  
-        </pre>
-      </div> -->
-
-      <h2>ScaleFlex</h2>
-
-<div id="date-container" class="retro-dates">From: 01.07.2023 To: 31.10.2023</div>    
-
-      <div class="section3"> [~] <h2 class="display-5"> Interned at , <b>ScaleFlex</b> as a <b>Python Software Developer</b>.Worked on the internal project aimed to facilitate the work of the quality assurance team. Gained knowledge in the field of image processing as well as experience in Software as a Service (SaaS).Worked on the internal project aimed to facilitate the work of the quality assurance team. Gained knowledge in the field of image processing as well as experience in Software as a Service (SaaS).
-    </h2>
-      </div>
-      
-      <!-- <div class="section3"> [~] <h2 class="display-5"> I've interned at , <b>ScaleFlex</b> as a <b>Python Software Developer</b>, and I'm particularly interested in the intersection of art, technology, and <b>cybersecurity. </h2>
-      </div> -->
-
-      <div class="experience-container text-center my-4">
-        <div class="line"></div> <!-- Top Line -->
-    </div>
-
-      <div class="section4"> [~] <h2 class="display-5">Skills: </h2>
-
-        <h2 class="display-5"></h2>
-              Java, Python, C++, and Bash scripting form the core of my programming expertise.Building robust and efficient applications and performing data analysis and develop machine learning models. Bash scripting, on the other hand, has been instrumental in automating tasks and managing systems, enhancing my productivity as a developer.
-
-      </div>
-
-      <div class="section4"> >>> <h2 class="display-6">  <b> Education:</b>Studied graphic design at <b>National high school of Polygraphy and Photography</b>.Currently studying Computer Science at the <b>New Bulgarian University.
-    </h2>
-      </div>
-
-      <div class="section5">
-        <h2 class="display-5">$ome of my Projects:</h2>
-        <!-- <ul>
-          <li><a href="https://github.com/Marto19/CSCB532-logistics-company">CSCB532-logistics-company</a></li>
-          <li><a href="https://github.com/Marto19/eGradeBook">eGradeBook</a></li>
-          <li><a href="https://github.com/Marto19/Sozial">Sozial</a></li>
-        </ul> -->
-      
-        <h3 class="display-7">
-        <div class="container d-flex flex-column">
-          <div class="row">
-            <div class="col-sm">
-              <a href="https://github.com/Marto19/CSCB532-logistics-company"><b>CSCB532-logistics-company</b></a> - A logistics company application
-            </div>
-            <div class="col-sm">
-              <a href="https://github.com/Marto19/eGradeBook"><b>eGradeBook</b></a> - An elecronic gradebook application
-            </div>
-            <div class="col-sm">
-              <a href="https://github.com/Marto19/Sozial"><b>Sozial</b></a> - A social media application for low quality images XD.
-            </div>
-          </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">~/martin-trenkov</div>
+                <button class="mobile-menu-button" onclick="toggleMobileMenu()">☰</button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#experience">experience</a></li>
+                    <li><a href="#skills">skills</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
         </div>
-      </h3>
-      </div>
-      
-      
-    <div>
-  <h2 class="display-5 col-12 col-sm-6 col-md-8 col-lg-9">Contact Form</h2>
-  <h3>Feel free to contact me:</h3>
-  <h3 class="display-7">
-    <pre class="overflow-auto">
-      <code class="python">
-┌──(root㉿root)-[~]
-└─$ vim contact_form.py
+    </header>
 
-def contact_form():
-    print("Welcome to the Quirky Contact Form!")
-    print("\033[1;34;40m---\033[m")
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-greeting">hello world! ദ്ദി（• ˕ •マ.ᐟ</div>
+            <h1 class="hero-name">Martin Trenkov</h1>
+            <div class="hero-title">Computer Science Student & Developer</div>
+            <p class="hero-description">
+                Passionate about the intersection of art, technology, and cybersecurity. 
+                Currently studying at New Bulgarian University with a background in Graphic Design and Photography.
+            </p>
+        </div>
+    </section>
 
-    name = "Martin Trenkov"
-    email = "<a href='mailto:martintrenkov@protonmail.com'>martintrenkov@protonmail.com</a>"
-    linkedin = "<a href='https://www.linkedin.com/in/martin-trenkov/'>CLICK ME!</a>"
-    <!-- phone = "<a href='tel:+359882713751'>oh, you're bold!</a>" -->
-    cv_download = "<a href='CV-CS.pdf' download>CLICK ME</a>"
-    academia_edu = "<a href='https://independent.academia.edu/Trenkov'>here</a>"
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">about_me</h2>
+            <div class="description">
+                I'm a Computer Science student at the New Bulgarian University with a unique background that blends 
+                technical expertise with creative vision. My journey started in graphic design and photography at the 
+                National High School of Polygraphy and Photography, which gave me a strong foundation in visual 
+                communication and attention to detail. This creative background now enhances my approach to software 
+                development, allowing me to create solutions that are not only functional but also user-friendly and 
+                aesthetically pleasing.
+            </div>
+        </div>
+    </section>
 
-if __name__ == "__main__":
-    contact_form()
-    </code></pre>
-  </h3>
-</div>
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-title">experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="company-name">IBM</div>
+                        <div class="date-range">Jan 2025 - Present</div>
+                    </div>
+                    <div class="role">Software Engineer</div>
+                    <div class="description">
+                        Currently working as a Software Engineer at IBM, leveraging my previous internship experience 
+                        to contribute to enterprise-level software solutions. Building upon my expertise in IBM ESS, 
+                        system administration, and automation to develop robust software applications and optimize 
+                        existing systems.
+                    </div>
+                </div>
 
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="company-name">IBM</div>
+                        <div class="date-range">Jul 2024 - Dec 2024</div>
+                    </div>
+                    <div class="role">Server & Storage (ESS) Intern</div>
+                    <div class="description">
+                        Gained hands-on experience with IBM ESS, Spectrum Scale (GPFS), and Red Hat Enterprise Linux (RHEL). 
+                        Developed skills in data management, ACLs, and automation through Bash scripting, while mastering 
+                        tools like AFM for efficient data transfers. Worked with Salesforce Lightning, enhancing system 
+                        integration and optimization. This role significantly strengthened my expertise in enterprise 
+                        storage and system administration.
+                    </div>
+                </div>
 
-    <h2 class="display-10">
-    <div class="ascii2">
-      <pre>
-        <code>
-(づ ᴗ _ ᴗ) づ  Thank you!
-For visiting my page!
-        </code>
-        </pre>
-    </div>
-  </h2>
-    <!-- <div class="text-center">Blog *upcomming</div> -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="company-name">ScaleFlex</div>
+                        <div class="date-range">Jul 2023 - Oct 2023</div>
+                    </div>
+                    <div class="role">Python Software Developer Intern</div>
+                    <div class="description">
+                        Worked on internal projects aimed to facilitate the work of the quality assurance team. 
+                        Gained valuable knowledge in the field of image processing as well as extensive experience 
+                        in Software as a Service (SaaS) architecture and development practices.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="text-center my-4">
-      <a href="https://rickroll.it/rickroll.mp4" 
-      class="blog-link" 
-      style="text-decoration: none; font-size: 1.2rem;"
-      id="rickroll-link"
-      target="_blank">Blog</a>
-  </div>
-     
-  <script>
-    // Add event listener to the link
-    document.getElementById('rickroll-link').addEventListener('click', function(event) {
-        // Trigger a notification using alert
-        setTimeout(() => {
-            alert("I apologise sincerely, the blog is still upcomming");
-        }, 500); // Delay for dramatic effect
-    });
-</script>
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title">skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-list">
+                        Java, Python, C++, Bash scripting form the core of my programming expertise. 
+                        I focus on building robust and efficient applications, performing data analysis, 
+                        and developing machine learning models.
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Technologies & Tools</h3>
+                    <div class="skill-list">
+                        IBM ESS, Spectrum Scale (GPFS), Red Hat Enterprise Linux (RHEL), Salesforce Lightning, 
+                        Git, Docker, Linux system administration
+                    </div>
+                </div>
 
-    </div>
+                <div class="skill-category">
+                    <h3>Specializations</h3>
+                    <div class="skill-list">
+                        System Administration, Data Management, Image Processing, SaaS Development, 
+                        Automation & Scripting, Cybersecurity
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Creative Background</h3>
+                    <div class="skill-list">
+                        Graphic Design, Photography, Visual Communication, UI/UX Principles, 
+                        Creative Problem Solving
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title">
+                        <a href="https://github.com/Marto19/CSCB532-logistics-company" target="_blank">
+                            CSCB532-logistics-company
+                        </a>
+                    </div>
+                    <div class="project-description">
+                        A comprehensive logistics company application built to manage and optimize supply chain operations.
+                    </div>
+                    <a href="https://github.com/Marto19/CSCB532-logistics-company" target="_blank" class="project-link">
+                        View on GitHub →
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">
+                        <a href="https://github.com/Marto19/eGradeBook" target="_blank">
+                            eGradeBook
+                        </a>
+                    </div>
+                    <div class="project-description">
+                        An electronic gradebook application designed to streamline academic record management and student progress tracking.
+                    </div>
+                    <a href="https://github.com/Marto19/eGradeBook" target="_blank" class="project-link">
+                        View on GitHub →
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">
+                        <a href="https://github.com/Marto19/Sozial" target="_blank">
+                            Sozial
+                        </a>
+                    </div>
+                    <div class="project-description">
+                        A social media application for low quality images - because sometimes imperfection is perfect! XD
+                    </div>
+                    <a href="https://github.com/Marto19/Sozial" target="_blank" class="project-link">
+                        View on GitHub →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">contact</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <a href="mailto:martintrenkov@protonmail.com">
+                        <div class="contact-label">email</div>
+                        <div class="contact-value">martintrenkov@protonmail.com</div>
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <a href="https://www.linkedin.com/in/martin-trenkov/" target="_blank">
+                        <div class="contact-label">linkedin</div>
+                        <div class="contact-value">martin-trenkov</div>
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <a href="https://independent.academia.edu/Trenkov" target="_blank">
+                        <div class="contact-label">academia</div>
+                        <div class="contact-value">academic profile</div>
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <a href="CV-CS.pdf" download>
+                        <div class="contact-label">resume</div>
+                        <div class="contact-value">download cv</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-ascii">
+(づ ᴗ _ᴗ)づ Thank you for visiting!
+            </div>
+            <div>© 2025 Martin Trenkov</div>
+        </div>
+    </footer>
+
     <script>
-      const div = document.querySelector("#welcoming");
-      const text = ">> Hello, my name is Martin Trenkov!";
-    
-      function textTypingEffect(element, text, i = 0){
-        element.textContent += text[i];
-    
-        if(i === text.length - 1){
-          return;
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
         }
-    
-        setTimeout(() => {
-          textTypingEffect(element, text, i + 1);
-        }, 100);
-      }
-    
-      textTypingEffect(div, text);
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll-based animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe cards for animation
+        document.querySelectorAll('.experience-card, .project-card, .skill-category, .contact-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Easter egg for blog link (keeping your rickroll)
+        const blogLink = document.querySelector('a[href*="rickroll"]');
+        if (blogLink) {
+            blogLink.addEventListener('click', function(event) {
+                setTimeout(() => {
+                    alert("I apologise sincerely, the blog is still upcoming! 😅");
+                }, 500);
+            });
+        }
     </script>
-  </body>
+</body>
 </html>
-
-
- <!-- ╭∩╮( •̀_•́ )╭∩╮ AGAIN, please dont check the code..... please-->
