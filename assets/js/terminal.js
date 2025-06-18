@@ -1,10 +1,41 @@
+/**
+ * Interactive Terminal and Space Invaders Game Implementation
+ * This module creates an interactive terminal interface with various commands
+ * and includes a fully playable Space Invaders game.
+ * 
+ * Features:
+ * - Command-line interface with various interactive commands
+ * - Integrated Space Invaders game with ASCII graphics
+ * - Custom game engine with collision detection
+ * - Score tracking and lives system
+ * - Easter eggs and hidden commands
+ * 
+ * Commands:
+ * - help: Display available commands
+ * - about: Show information about the developer
+ * - skills: List technical skills
+ * - joke: Display random programming jokes
+ * - matrix: Matrix-related Easter egg
+ * - clear: Clear the terminal
+ * - invade: Start Space Invaders game
+ * - quit: Exit the game
+ * - konami: Secret Easter egg
+ */
+
 export function initializeTerminal() {
+    // Get DOM elements for terminal interface
     const input = document.getElementById('terminalInput');
     const output = document.getElementById('gameOutput');
     
+    // Game state variables
     let gameInterval;
     let gameState = null;
 
+    /**
+     * Creates initial game state for Space Invaders
+     * Includes player position, aliens grid, lasers, and game statistics
+     * @returns {Object} Initial game state configuration
+     */
     function createGameState() {
         return {
             player: { x: 40, lives: 3 },
@@ -23,6 +54,11 @@ export function initializeTerminal() {
         };
     }
 
+    /**
+     * Renders the game state to ASCII graphics
+     * Creates a text-based representation of the game
+     * @returns {string} Formatted game display string
+     */
     function renderGame() {
         if (!gameState) return '';
         
@@ -74,6 +110,15 @@ export function initializeTerminal() {
         return display.map(row => row.join('')).join('\n');
     }
 
+    /**
+     * Updates game state on each frame
+     * Handles:
+     * - Player and alien movement
+     * - Laser physics
+     * - Collision detection
+     * - Score tracking
+     * - Game over conditions
+     */
     function updateGame() {
         if (!gameState || gameState.gameOver) return;
         
@@ -198,6 +243,11 @@ export function initializeTerminal() {
         }
     }
 
+    /**
+     * Available terminal commands
+     * Each command is a function that returns a string response
+     * or null for special commands (like clear and invade)
+     */
     const commands = {
         help: () => 'Available commands: help, about, skills, joke, matrix, clear, invade, quit, whoami, ls, hack',
         about: () => 'Hi! I\'m Martin, a Computer Science student and Software Engineer.',
@@ -259,7 +309,14 @@ export function initializeTerminal() {
         konami: () => '🎮 KONAMI CODE ACTIVATED! You\'ve unlocked the secret developer mode! 🎮'
     };
 
-    // Handle game controls
+    /**
+     * Game Controls Event Listener
+     * Handles keyboard input for Space Invaders game:
+     * - A: Move left
+     * - D: Move right
+     * - Space: Shoot
+     * - Q: Quit game
+     */
     document.addEventListener('keydown', (e) => {
         if (!gameState || gameState.gameOver) return;
         
@@ -292,6 +349,11 @@ export function initializeTerminal() {
         }
     });
 
+    /**
+     * Terminal Input Event Listener
+     * Handles command input and execution
+     * Displays command output in the terminal
+     */
     input.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             const cmd = input.value.toLowerCase().trim();
