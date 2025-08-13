@@ -158,46 +158,51 @@
             text-shadow: 0 0 10px var(--accent);
         }
 
-        /* Hero Section with Terminal */
+        /* Hero Section */
         .hero {
-            padding: 4rem 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
             position: relative;
+            padding: 2rem;
         }
 
-        .terminal-window {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            margin: 2rem auto;
-            max-width: 800px;
-            position: relative;
-            overflow: hidden;
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
-        .terminal-header {
-            background: #2d2d2d;
-            padding: 0.5rem 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+        .hero-greeting {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--accent), #80ffbb);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: fadeInUp 1s ease-out;
         }
 
-        .terminal-button {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 4vw, 2rem);
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.3s backwards;
         }
 
-        .terminal-button.close { background: #ff5f56; }
-        .terminal-button.minimize { background: #ffbd2e; }
-        .terminal-button.maximize { background: #27ca3f; }
-
-        .terminal-content {
-            padding: 1.5rem;
-            font-family: var(--font-mono);
-            font-size: 0.9rem;
-            min-height: 200px;
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
         }
 
         .terminal-line {
@@ -795,45 +800,9 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <div class="terminal-button close"></div>
-                    <div class="terminal-button minimize"></div>
-                    <div class="terminal-button maximize"></div>
-                    <span style="margin-left: 1rem; color: #888;">martin@portfolio:~$</span>
-                </div>
-                <div class="terminal-content">
-                    <div class="terminal-line">
-                        <span class="prompt">martin@portfolio:~$</span> 
-                        <span class="command">whoami</span>
-                    </div>
-                    <div class="terminal-line">
-                        <span class="output">Martin Trenkov - Software Engineer at IBM</span>
-                    </div>
-                    <div class="terminal-line">
-                        <span class="prompt">martin@portfolio:~$</span> 
-                        <span class="command">cat skills.txt</span>
-                    </div>
-                    <div class="terminal-line">
-                        <span class="output">Java | Python | C++ | Bash | System Administration</span>
-                    </div>
-                    <div class="terminal-line">
-                        <span class="prompt">martin@portfolio:~$</span> 
-                        <span class="command">echo "Hello World! ദ്ദി（• ˕ •マ.ᐟ"</span>
-                    </div>
-                    <div class="terminal-line">
-                        <span class="output">Hello World! ദ്ദി（• ˕ •マ.ᐟ</span>
-                    </div>
-                    <div class="terminal-line">
-                        <span class="prompt">martin@portfolio:~$</span> 
-                        <span class="typing-cursor">|</span>
-                    </div>
-                </div>
-            </div>
-            
-            <h1 class="hero-name" data-text="Martin Trenkov">Martin Trenkov</h1>
-            <div class="hero-title">Computer Science Student & Software Engineer</div>
+        <div class="hero-content">
+            <h1 class="hero-greeting">Hello, I'm Martin Trenkov</h1>
+            <p class="hero-subtitle">Software Engineer at IBM</p>
         </div>
     </section>
 
